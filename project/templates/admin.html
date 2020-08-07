@@ -1,0 +1,32 @@
+{% extends "admin_base1.html" %}
+{% block content %}
+<script>
+
+</script>
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Administrator Login</h3>
+    <div class="box" id="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+        {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form >
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" id="clientid" name="ClientID" placeholder="ClientID" autofocus="">
+
+                </div>
+
+            </div>
+            
+
+        </form>
+        <button class="button is-block is-info is-large is-fullwidth" id="get_token">Get Token</button>
+    
+    </div>
+</div>
+
+{% endblock%}

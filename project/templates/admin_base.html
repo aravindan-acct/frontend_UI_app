@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+    <title>Admin Space</title>
+</head>
+
+    <section class="hero is-fullheight is-dark is-bold">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    
+                    <a href="{{ url_for('admin.pets_menu') }}" class="navbar-item" id="home">
+                        Home
+                    </a>
+                    
+                    <a href="{{ url_for('admin.addpet') }}" class="navbar-item" id="addpet">
+                        Add Pet
+                    </a>
+                    
+                </div>
+            </nav>
+        </div>
+        <body>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+    </section>
+    <script src="{{ url_for('static', filename='node_modules/jso/dist/jso.js')}}"></script>
+    <script src="{{ url_for('static', filename='node_modules/hellojs/dist/hello.js')}}"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+
+
+</html>

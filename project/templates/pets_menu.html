@@ -1,0 +1,68 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+    
+    <strong class="content is-large">Inventory</strong>
+    
+
+    <table class="table is-hoverable is-fullwidth" id=petstable >
+        <thead>
+        <tr>
+            <th class="Name" >Name</th>
+            <th class="tag1" >Tag-1</th>
+            <th class="tag2" >Tag-2</th>
+            <th class="photo1" >Photo-1</th>
+            <th class="photo2" >Photo-2</th>
+            <th class="delete_button" >Remove</th>
+            <th class="edit" >Modify</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+    <script>
+        var data = '{{ display_json|tojson }}';
+        console.log("printing data received from the backend");
+        console.log(data);
+        console.log(typeof(data));
+
+        var payload = $.parseJSON('['+data+']');
+        console.log("printing data after processing");
+        
+        var value = payload[0];
+        console.log(typeof(value));
+        var pet_id_array=[];
+        for(i=0; i<Object.keys(value).length;i++){
+            
+            each_pet = Object.keys(value)[i];
+            console.log(each_pet);
+            each_pet_attr_list = value[each_pet];
+            each_pet_attr = each_pet_attr_list[0];
+            console.log(each_pet_attr.length);
+            pet_name = each_pet_attr[0];
+            pet_tag1 = each_pet_attr[1];
+            pet_tag2 = each_pet_attr[2];
+            pet_photo1 = each_pet_attr[3];
+            pet_photo2 = each_pet_attr[4];
+            var petname_row = '<tr><td style="height:200px">'+pet_name+'</td></tr>';
+            $("#petstable th.Name").append(petname_row);
+            var tag1_row = '<tr><td style="height:200px">'+pet_tag1+'</td></tr>';
+            $("#petstable th.tag1").append(tag1_row);
+            var tag2_row = '<tr><td style="height:200px">'+pet_tag2+'</td></tr>';
+            $("#petstable th.tag2").append(tag2_row);
+            var photo1_row = '<tr><td style="height:200px"><img src='+pet_photo1+' width="100" height="100"></td></tr>';
+            $("#petstable th.photo1").append(photo1_row);
+            var photo2_row = '<tr><td style="height:200px"><img src='+pet_photo2+' width="100" height="100"></td></tr>';
+            $("#petstable th.photo2").append(photo2_row);
+            delete_url = "{{ url_for('admin.pets_delete', petid=each_pet) }}"
+            var delete_option = '<tr><td style="height:200px"><a '+"href={{ url_for('admin.pets_delete') }}"+'?petid='+each_pet+'>Delete</a></td></tr>';
+            $("#petstable th.delete_button").append(delete_option);
+            edit_url = "{{ url_for('admin.pets_edit', petid=each_pet) }}"
+            var edit_option = '<tr><td style="height:200px"><a '+"href={{ url_for('admin.pets_edit') }}"+'?petid='+each_pet+'>Edit</a></td></tr>';
+            $("#petstable th.edit").append(edit_option);
+        }
+    </script>
+{% endblock %}
