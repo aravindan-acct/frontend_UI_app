@@ -60,6 +60,9 @@
                         Contact Us
                     </a>
 
+                    {% if current_user.is_authenticated %}
+                    <button class="button"><a href="{{ url_for('main.getcheckoutpage') }}">Checkout</a></button>
+                    {% endif %}
                 </div>
             </nav>
         </div>

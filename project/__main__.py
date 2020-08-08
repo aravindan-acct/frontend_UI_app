@@ -19,6 +19,8 @@ def create_app():
 
     from .models import User
     from .models import Token
+    from .models import Carts
+    from .models import CartItems
     
 
     @login_manager.user_loader

@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% extends "pets_base.html" %}
 {% block content %}
 
-<div id="pets"></div>
+<div class= "container" id="pets">
 <script>
   var pets = '{{ data|tojson }}';
   var payload = $.parseJSON(pets);
@@ -11,12 +11,51 @@
   Object.keys(payload).forEach(key => {
     console.log(payload[key]);
     var keyname = payload[key];
-    var card = '<div class = "card" id = '+objectkey+'><div class="card-image" id='+cardimage+'><figure class="image is-64x64px"><img src='+payload[key]["photo1"]+'></figure></div></div> <div class="card-content"> <div class="media"><div class="media-left"><figure class="image is-48x48"><img src='+payload[key]["photo2"]+'></figure></div><div class="media-content"><p class="title is-4">John Smith</p><p class="subtitle is-6">@johnsmith</p></div></div><div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a><br><time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time></div></div></div>';
+    var card = ' \
+    <div class="tile is-ancestor">\
+  <div class="tile is-vertical is-8">\
+    <div class="tile">\
+      <div class="tile is-parent is-vertical">\
+        <article class="tile is-child notification is-primary">\
+          <p class="title">Vertical...</p>\
+          <p class="subtitle">Top tile</p>\
+        </article>\
+        <article class="tile is-child notification is-warning">\
+          <p class="title">...tiles</p>\
+          <p class="subtitle">Bottom tile</p>\
+        </article>\
+      </div>\
+      <div class="tile is-parent">\
+        <article class="tile is-child notification is-info">\
+          <p class="title">Middle tile</p>\
+          <p class="subtitle">With an image</p>\
+          <figure class="image is-4by3">\
+            <img src="'+payload[key]["photo1"]+'"\
+          </figure>\
+        </article>\
+      </div>\
+    </div>\
+    <div class="tile is-parent">\
+      <article class="tile is-child notification is-danger">\
+        <p class="subtitle"> </p>\
+        <p class="subtitle"><button class="button"><a href="/addtocart?pet_id='+key+'">Add to Cart</a></button></p>\
+        <div class="content">\
+          <!-- Content -->\
+        </div>\
+      </article>\
+    </div>\
+  </div>\
+  <div class="tile is-parent">\
+  </div>\
+</div>\
+    ';
     $("#pets").append(card);
-    //var card_image = '<div class="card-image" id = card_image_'+payload[key]+'></div>';
+    
     objectkey = objectkey+1;
     });
   
 
 </script>
+</div>
+
 {% endblock%}

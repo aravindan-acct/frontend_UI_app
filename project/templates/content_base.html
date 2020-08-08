@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-    <title>Flask Auth Example</title>
+    <title>My Petstore</title>
 </head>
 
     <section class="hero is-dark is-fullheight is-bold">
         <div class="hero-head">
             <nav class="navbar">
                 <div class="container">
+                    {% if not current_user.is_authenticated %}
                     <a href="{{ url_for('main.index') }}" class="navbar-item">
                         Home
                     </a>
+                    {% endif %}
                     
-
                     {% if current_user.is_authenticated %}
-                    <a href="{{ url_for('main.profile') }}" class="navbar-item">
-                        Profile
+                    <a href="{{ url_for('main.pets') }}" class="navbar-item">
+                        User Home
                     </a>
                     {% endif %}
 
                     {% if current_user.is_authenticated %}
                     <a href="{{ url_for('main.inventory') }}" class="navbar-item">
-                        Pets Home
+                        Store
+                    </a>
+                    {% endif %}
+
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('main.profile') }}" class="navbar-item">
+                        Profile
                     </a>
                     {% endif %}
 

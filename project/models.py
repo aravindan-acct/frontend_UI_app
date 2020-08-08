@@ -19,5 +19,17 @@ class Token(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     tokenstring = db.Column(db.String(150))
 
+class Carts(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100))
+    activestate = db.Column(db.String(100))
+    
 
+
+class CartItems(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    pet_id = db.Column(db.Integer)
+    #cart_id = db.Column(db.Integer, db.ForeignKey('carts.id'), nullable=False)
+    #carts = db.relationship("Carts", backref = db.backref('cartitems', lazy=True))
+    cart_id = db.Column(db.Integer)
 db.create_all(app=create_app())
