@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
-from .models import User, Carts
+from .models import User, Carts, CartItems
 from . import db, backend_url, headers
 from flask_login import login_user, logout_user, login_required, current_user
 import requests
@@ -22,11 +22,23 @@ def signup():
 @login_required
 def logout():
     try:
-        delete_cart = Carts.query.filter_by(username = current_user.username).first()
+        activeuser = current_user.username
+        cart = Carts.query.filter_by(username = activeuser).first()
+        cart_id = cart.id
+        delete_cart_items = CartItems.query.filter_by(cart_id = cart_id).all()
+        for i in range(len(delete_cart_items)):
+            print("deleting cart items {} for this cart".format(delete_cart_items[i]))
+            db.session.delete(delete_cart_items[i])
+            db.session.commit()
+        delete_cart = Carts.query.filter_by(username = current_user.username).all()
         print(delete_cart)
+        print(type(delete_cart))
         for i in range(len(delete_cart)):
+            print("deleting cart {} for the user".format(delete_cart[i]))
+
             db.session.delete(delete_cart[i])
             db.session.commit()
+        
         logout_user()
     except:
         logout_user()

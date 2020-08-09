@@ -55,7 +55,13 @@ def admin_pets():
 @main.route('/checkout')
 @login_required
 def getcheckoutpage():
-    return render_template('checkout.html')
+    cartitems = CartItems.query.all()
+    print(cartitems)
+    print(type(cartitems))
+    if len(cartitems) == 0:
+        return redirect(url_for('main.pets'))
+    else:
+        return render_template('checkout.html')
 
 @main.route('/checkout', methods=['POST'])
 @login_required
@@ -74,6 +80,8 @@ def checkout_for_order():
 @main.route('/shippinginfo', methods=['POST'])
 @login_required
 def shippinginfo():
+    
+
     return render_template('pets.html')
 
 @main.route('/addtocart', methods=['GET'])
@@ -88,3 +96,4 @@ def addtocart():
     db.session.commit()
     
     return render_template('pets.html')
+
