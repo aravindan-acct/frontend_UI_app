@@ -3,7 +3,7 @@ from . import db, backend_url
 from flask_login import login_required, current_user
 import requests
 import json
-from .models import Token, CartItems, Carts
+from .models import Token, CartItems, Carts, Transactions, TransactionDetails
 
 main = Blueprint('main', __name__)
 
@@ -80,9 +80,73 @@ def checkout_for_order():
 @main.route('/shippinginfo', methods=['POST'])
 @login_required
 def shippinginfo():
+    headers = {"Content-Type": "application/json"}
+    address = request.form.get('address')
+    cart = Carts.query.filter_by(username = current_user.username).first()
     
+    print(cart)
+    cart_id = cart.id
+    print(cart_id)
+    cartitems = CartItems.query.filter_by(cart_id = cart_id).all()
+    
+    print(cartitems)
+    cartitems_dict = {}
+    for i in range(len(cartitems)):
+        cartitems_dict.update({
+            cartitems[i].id : {
+                "pet_id": cartitems[i].pet_id,
+                "cart_id": cartitems[i].cart_id
+            } 
+        })
+    
+    print(cartitems_dict)
 
-    return render_template('pets.html')
+    #check if transaction is active
+    active_transactions = Transactions.query.filter_by(status = "active").all()
+    print("active transacations {}".format(active_transactions))
+    if len(active_transactions) != 0:
+        #Nothing added in cart
+        return render_template('checkout.html')
+    else:
+        transaction = Transactions(username = current_user.username, cartid = cart_id, status = "active")
+        TransactionDetails(address=address, transactions = transaction)
+    
+        db.session.add(transaction)
+        db.session.commit()
+        #order_details = 
+
+        order = Transactions.query.filter_by(status = "active").all()
+        print(order)
+
+        order_num = order[0].id
+        
+        order_details = TransactionDetails.query.filter_by(transaction_id = order_num).all()
+        #print(order_details)
+        for i in range(len(order_details)):
+            print("order details")
+            print(order_details)
+            payload = {}
+            for k,v in cartitems_dict.items():
+                payload.update({
+                "pet_id" : v["pet_id"],
+                "transactionDetailsId" : order_details[i].id,
+                "username" : current_user.username,
+                "shipDate": "2017-07-21T17:32:28Z",
+                "status" : "approved",
+                "complete": True
+                })
+                print(payload)
+                order_place_url = backend_url+"/store/order"
+                order_place_response = requests.post(order_place_url, headers=headers, data=json.dumps(payload))
+                print(order_place_response.text)
+        #update the transaction to approved
+        active_transactions = Transactions.query.filter_by(status = "active").all()
+        print("number of active transactions are {}".format(range(len(active_transactions))))
+        for i in range(len(active_transactions)):
+            print("approving the transactions")
+            active_transactions[i].status = "approved"
+            db.session.commit()
+        return render_template(url_for('main.orderdetails'))
 
 @main.route('/addtocart', methods=['GET'])
 @login_required
@@ -97,3 +161,7 @@ def addtocart():
     
     return render_template('pets.html')
 
+@main.route('/orderdetails.html', methods=['GET'])
+@login_required
+def orderdetails():
+    return render_template('orderdetails.html')

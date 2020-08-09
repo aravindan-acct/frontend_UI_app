@@ -37,14 +37,11 @@ class Transactions(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     cartid = db.Column(db.Integer)
+    status = db.Column(db.String(100))
 
 class TransactionDetails(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    doornum = db.Column(db.Integer)
-    city = db.Column(db.String(20))
-    state = db.Column(db.String(20))
-    country = db.Column(db.String(20))
-    phone = db.Column(db.Integer)
+    address = db.Column(db.String(200))
     transaction_id = db.Column(db.Integer, db.ForeignKey('transactions.id'), nullable=False)
     transactions = db.relationship("Transactions", backref = db.backref('transactiondetails', lazy=True))
 db.create_all(app=create_app())
