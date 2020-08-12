@@ -37,5 +37,5 @@ svr_payload = {
     "identifier": "IP Address",
     "address-version": "IPv4"
 }
-create_svr = requests.post(svr_url, headers=headers, data=json.dumps(svr_payload))
+create_svr = requests.post(svr_url, headers = api_headers, data=json.dumps(svr_payload))
 print(create_svr.text)
