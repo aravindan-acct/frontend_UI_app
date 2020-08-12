@@ -16,7 +16,7 @@ token=token_rstrip.replace('"','')
 auth_header=generate_header('',token)
 api_headers = {"Content-Type":"application/json", "Authorization": auth_header}
 #Creating the Service
-server = os.system("ip -f inet addr show dev eth0 | sed -n 's/^ *inet *\([.0-9]*\).*/\1/p'")
+server = os.system("ip -f inet addr show dev eth0 | sed -n 's/^ *inet *\([.0-9]*\).*/\\1/p'")
 service_url = "http://"+waf_ip+":8000/restapi/v3.1/services"
 
 svc_payload = {
