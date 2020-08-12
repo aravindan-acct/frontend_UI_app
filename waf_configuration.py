@@ -8,7 +8,7 @@ waf_password = os.environ['WAFPASSWORD']
 headers = {"Content-Type": "application/json"}
 login_url = "http://"+waf_ip+":8000/restapi/v3.1/login"
 login_payload = {"username":"admin", "password":waf_password}
-login_req = requests.post(login_url, headers=headers, data=json.dumps(login_payload))
+login_request = requests.post(login_url, headers=headers, data=json.dumps(login_payload))
 token_output=login_request.text
 token_split=token_output.split(":")
 token_rstrip=token_split[1].rstrip("}")
