@@ -47,7 +47,7 @@ def create_app():
     return app
 def main():
     app = create_app()
-    app.run(port=7979,debug=True)
+    app.run(host="0.0.0.0",port=7979,debug=True)
 
 if __name__ == "__main__":
     main()
