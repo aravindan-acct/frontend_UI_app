@@ -161,6 +161,30 @@ def addtocart():
     
     return render_template('pets.html')
 
+@main.route('/removefromcart', methods=['GET'])
+@login_required
+def removefromcart():
+    username = current_user.username
+    pet_id = request.args["pet_id"]
+    cart = Carts.query.filter_by(username = current_user.username).first()
+    cart_id = cart.id
+    new_cart_item = CartItems(pet_id = pet_id, cart_id=cart_id)
+    db.session.delete(new_cart_item)
+    db.session.commit()
+    return render_template('pets.html')
+
+@main.route('/viewcart', methods=['GET'])
+@login_required
+def viewcart():
+    cart_items = CartItems.query.all()
+    data={}
+    for i in range(len(cart_items)):
+        print(cart_items[i])
+        data.update({
+            "pet_id": cart_items[i].pet_id
+        })
+    return render_template('viewcart.html', data = data)
+
 @main.route('/orderdetails.html', methods=['GET'])
 @login_required
 def orderdetails():

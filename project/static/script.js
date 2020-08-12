@@ -1,11 +1,11 @@
 
     $(document).ready(()=>{
-
+        
     
     $("#get_token").click(function test(){
-    
+    var callbackurl = "{{ callback_ip }}";
     let opts = {
-        redirect_uri: "http://localhost:7979/home",
+        redirect_uri: "http://"+callbackurl+"/home",
         response_type: 'token',
 	};
     let client = new jso.JSO({

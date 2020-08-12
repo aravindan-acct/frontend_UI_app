@@ -6,6 +6,7 @@ import requests
 import json
 from .models import Token
 from . import db, backend_url
+import os
 
 admin = Blueprint('admin', __name__)
 
@@ -13,7 +14,8 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    return render_template('admin.html')
+    callback_ip = os.environ['WAFPublicIP']
+    return render_template('admin.html', callback_ip = callback_ip)
 
 
 '''
@@ -24,6 +26,7 @@ def administrator_login():
 '''
 @admin.route('/home')
 def callback():
+    
     return render_template('home.html')
 
 
