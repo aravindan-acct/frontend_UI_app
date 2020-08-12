@@ -29,7 +29,7 @@ svc_payload = {
 
 create_svc = requests.post(service_url, data=json.dumps(svc_payload), headers = api_headers)
 print(create_svc.text)
-svr_url = "http://"+waf_ip+":8000/restapi/v3.1/services/"+frontend_svc+"/servers"
+svr_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/servers"
 svr_payload = {
     "name": "frontendappserver",
     "port": 7979,
