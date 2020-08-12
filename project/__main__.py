@@ -45,8 +45,10 @@ def create_app():
     app.register_blueprint(admin_blueprint)
     
     return app
-
-if __name__ == "__main__":
+def main():
     app = create_app()
     app.run(port=7979,debug=True)
+
+if __name__ == "__main__":
+    main()
     
