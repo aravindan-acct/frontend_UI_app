@@ -2,6 +2,7 @@ import socket
 import requests
 import json
 from http_basic_auth import generate_header, parse_header
+import os
 
 waf_ip = os.environ['WAFIP']
 waf_password = os.environ['WAFPASSWORD']
