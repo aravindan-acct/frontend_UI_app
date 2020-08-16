@@ -61,8 +61,8 @@ def callback_backend():
             data=sample_file.read()
         
         for keys,val in data.items():
-            print(data.items())
-
+            print(keys)
+            print(val)
             pet_url = backend_url+"/pet"
             headers = {
                 'Authorization': auth_header_value,
