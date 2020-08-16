@@ -55,26 +55,8 @@ def callback_backend():
     response = requests.request("POST", url, headers=headers, data = payload)
     print(response.status_code)
     '''
-    #loading sample data
-    try:
-        with open("static/pets_data.json") as sample_file:
-            data=sample_file.read()
-        
-        for keys,val in data.items():
-            print(keys)
-            print(val)
-            pet_url = backend_url+"/pet"
-            headers = {
-                'Authorization': auth_header_value,
-                'Content-Type': 'application/x-www-form-urlencoded'
-                    }
-        
-            response = requests.request("POST", pet_url, headers=headers, data = urlencode(val))
-
-        #return redirect('adminhome.html')
-        return redirect('/admin/all_pets')
-    except:
-        return redirect('/admin/all_pets')
+    
+    return redirect('/admin/all_pets')
 
 '''
 @admin.route('/adminhome.html')
@@ -170,6 +152,7 @@ def pets_delete():
     else:
         return redirect('/admin/all_pets')
 
+
 @admin.route('/admin/all_pets')
 def pets_menu():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
@@ -183,6 +166,27 @@ def pets_menu():
     print(len(resp))
     print(resp)
     return render_template('pets_menu.html', display_json=resp)
+
+@admin.route('/admin/uploadsampledata')
+def uploadsampledata():
+    try:
+        with open("static/pets_data.json") as sample_file:
+            data=sample_file.read()
+        for keys,val in data.items():
+            print(keys)
+            print(val)
+            pet_url = backend_url+"/pet"
+            headers = {
+                'Authorization': auth_header_value,
+                'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+        
+            response = requests.request("POST", pet_url, headers=headers, data = urlencode(val))
+        
+        return redirect('/admin/all_pets')
+    except:
+        print("error loading sample data")
+        return redirect('/admin/all_pets')
 
 @admin.route('/admin/addpet', methods=['POST'])
 def addpet():
