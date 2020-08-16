@@ -170,7 +170,7 @@ def pets_menu():
 @admin.route('/admin/uploadsampledata')
 def uploadsampledata():
     try:
-        with open("static/pets_data.json") as sample_file:
+        with open("pets_data.json") as sample_file:
             file_content=sample_file.read()
             data=json.loads(file_content)
         for keys,val in data.items():
