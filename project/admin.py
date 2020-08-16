@@ -171,19 +171,27 @@ def pets_menu():
 def uploadsampledata():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
     try:
-        with open("/frontend_UI_app/project/pets_data.json") as sample_file:
-            file_content=sample_file.read()
-            data=json.loads(file_content)
-        for keys,val in data.items():
+        available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
+        headers = {"Authorization": token.tokenstring}
+        available_status_response = requests.get(available_status_url, headers=headers)
+        resp = dict()
+        resp = json.loads(available_status_response.text)
+        if len(resp) > 0:
+            return redirect('/admin/all_pets')
+        else:
+            with open("/frontend_UI_app/project/pets_data.json") as sample_file:
+                file_content=sample_file.read()
+                data=json.loads(file_content)
+            for keys,val in data.items():
             
-            pet_url = backend_url+"/pet"
+                pet_url = backend_url+"/pet"
             
-            headers = {"Authorization": token.tokenstring,
+                headers = {"Authorization": token.tokenstring,
                        "Content-Type": "application/x-www-form-urlencoded"}
         
-            response = requests.post(pet_url, headers=headers, data=urlencode(val))
+                response = requests.post(pet_url, headers=headers, data=urlencode(val))
         
-        return redirect('/admin/all_pets')
+            return redirect('/admin/all_pets')
     
     except:
         print("error loading sample data")
