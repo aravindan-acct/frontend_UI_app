@@ -170,16 +170,16 @@ def pets_menu():
 @admin.route('/admin/uploadsampledata')
 def uploadsampledata():
     try:
+        token = db.session.query(Token).order_by(Token.id.desc()).first()
         with open("pets_data.json") as sample_file:
             file_content=sample_file.read()
             data=json.loads(file_content)
         for keys,val in data.items():
             
             pet_url = backend_url+"/pet"
-            headers = {
-                'Authorization': auth_header_value,
-                'Content-Type': 'application/x-www-form-urlencoded'
-                    }
+            
+            headers = {"Authorization": token.tokenstring,
+                       "Content-Type": "application/x-www-form-urlencoded"}
         
             response = requests.post(pet_url, headers=headers, data = urlencode(val))
         
