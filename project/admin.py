@@ -169,25 +169,25 @@ def pets_menu():
 
 @admin.route('/admin/uploadsampledata')
 def uploadsampledata():
-    try:
-        token = db.session.query(Token).order_by(Token.id.desc()).first()
-        with open("pets_data.json") as sample_file:
-            file_content=sample_file.read()
-            data=json.loads(file_content)
-        for keys,val in data.items():
+    token = db.session.query(Token).order_by(Token.id.desc()).first()
+    with open("pets_data.json") as sample_file:
+        file_content=sample_file.read()
+        data=json.loads(file_content)
+    for keys,val in data.items():
             
-            pet_url = backend_url+"/pet"
+        pet_url = backend_url+"/pet"
             
-            headers = {"Authorization": token.tokenstring,
+        headers = {"Authorization": token.tokenstring,
                        "Content-Type": "application/x-www-form-urlencoded"}
         
-            response = requests.post(pet_url, headers=headers, data = urlencode(val))
+        response = requests.post(pet_url, headers=headers, data=urlencode(val))
         
-        return redirect('/admin/all_pets')
+    return redirect('/admin/all_pets')
+    '''
     except:
         print("error loading sample data")
         return redirect('/admin/all_pets')
-
+    '''
 @admin.route('/admin/addpet', methods=['POST'])
 def addpet():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
