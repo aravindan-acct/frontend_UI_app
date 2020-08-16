@@ -72,9 +72,9 @@ def callback_backend():
             response = requests.request("POST", pet_url, headers=headers, data = urlencode(val))
 
         #return redirect('adminhome.html')
-        return redirect('admin.html')
+        return redirect('/admin/all_pets')
     except:
-        return redirect('admin.html')
+        return redirect('/admin/all_pets')
 
 '''
 @admin.route('/adminhome.html')
