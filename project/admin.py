@@ -171,7 +171,8 @@ def pets_menu():
 def uploadsampledata():
     try:
         with open("static/pets_data.json") as sample_file:
-            data=sample_file.read()
+            file_content=sample_file.read()
+            data=json.loads(file_content)
         for keys,val in data.items():
             print(keys)
             print(val)
