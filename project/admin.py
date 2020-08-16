@@ -55,9 +55,26 @@ def callback_backend():
     response = requests.request("POST", url, headers=headers, data = payload)
     print(response.status_code)
     '''
+    #loading sample data
+    try:
+        with open("static/pets_data.json") as sample_file:
+            data=sample_file.read()
+        
+        for keys,val in data.items():
+            name = val['name']
 
-    #return redirect('adminhome.html')
-    return redirect('admin.html')
+            pet_url = backend_url+"/pet"
+            headers = {
+                'Authorization': auth_header_value,
+                'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+        
+            response = requests.request("POST", pet_url, headers=headers, data = urlencode(val))
+
+        #return redirect('adminhome.html')
+        return redirect('admin.html')
+    except:
+        return redirect('admin.html')
 
 '''
 @admin.route('/adminhome.html')

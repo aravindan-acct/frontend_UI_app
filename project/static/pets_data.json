@@ -1,0 +1,75 @@
+{
+    "pet1":{
+        "name":"dog",
+        "tag_1": "dog",
+        "tag_2": "puppy",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/Dogs/dog1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/Dogs/dog2.jpg",
+        "status": "available"
+    },
+    "pet2":{
+        "name":"bunny",
+        "tag_1": "bunny",
+        "tag_2": "rabbit",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/bunny/bunny1.jpeg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/bunny/bunny2.jpg",
+        "status": "available"
+    },
+    "pet3":{
+        "name":"calf",
+        "tag_1": "cow",
+        "tag_2": "calf",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/calf/calf1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/calf/calf2.jpg",
+        "status": "available"
+    },
+    "pet4":{
+        "name":"chicken",
+        "tag_1": "hen",
+        "tag_2": "chicken",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/chicken/chicken1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/chicken/chicken2.jpg",
+        "status": "pending"
+    },
+    "pet5":{
+        "name":"pony",
+        "tag_1": "horse",
+        "tag_2": "pony",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/horse/horse1.png",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/horse/horse2.jpg",
+        "status": "sold"
+    },
+    "pet6":{
+        "name":"kitten",
+        "tag_1": "cat",
+        "tag_2": "kitten",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/kitten/kitten1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/kitten/kitten2.jpg",
+        "status": "available"
+    },
+    "pet7":{
+        "name":"mouse",
+        "tag_1": "mouse",
+        "tag_2": "mickey",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/mouse/mouse1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/mouse/mouse2.jpg",
+        "status": "available"
+    },
+    "pet8":{
+        "name":"parrot",
+        "tag_1": "greenbird",
+        "tag_2": "parrot",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/parrot/parrot1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/parrot/parrot2.jpg",
+        "status": "sold"
+    },
+    "pet9":{
+        "name":"sparrow",
+        "tag_1": "homepet",
+        "tag_2": "sparrow",
+        "photo_1": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/sparrow/sparrow1.jpg",
+        "photo_2": "https://petstores3.s3-us-west-1.amazonaws.com/Pets/sparrow/sparrow2.jpg",
+        "status": "available"
+    }
+
+}
