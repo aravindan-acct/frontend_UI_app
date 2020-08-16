@@ -61,7 +61,7 @@ def callback_backend():
             data=sample_file.read()
         
         for keys,val in data.items():
-            name = val['name']
+            print(data.items())
 
             pet_url = backend_url+"/pet"
             headers = {
