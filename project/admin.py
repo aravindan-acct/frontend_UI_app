@@ -5,7 +5,7 @@ from six.moves.urllib.parse import urlencode
 import requests
 import json
 from .models import Token
-from . import db, backend_url
+from . import db, backend_url, logger
 import os
 
 admin = Blueprint('admin', __name__)
@@ -174,8 +174,8 @@ def uploadsampledata():
             file_content=sample_file.read()
             data=json.loads(file_content)
         for keys,val in data.items():
-            print(keys)
-            print(val)
+            
+            logger.info(val)
             pet_url = backend_url+"/pet"
             headers = {
                 'Authorization': auth_header_value,
@@ -186,7 +186,7 @@ def uploadsampledata():
         
         return redirect('/admin/all_pets')
     except:
-        print("error loading sample data")
+        logger.info("error loading sample data")
         return redirect('/admin/all_pets')
 
 @admin.route('/admin/addpet', methods=['POST'])
