@@ -24,7 +24,7 @@ server = socket.gethostbyname(hostname)
 certificate_url = "http://"+waf_ip+":8000/restapi/v3.1/certificates/self-signed-certificate"
 cert_payload = {
   "state": "CA",
-  "key-size": "1024",
+  "key-size": "2048",
   "common-name": "training.petstore.com",
   "city": "San Francisco",
   "organizational-unit": "Training",
@@ -64,3 +64,11 @@ svr_payload = {
 }
 create_svr = requests.post(svr_url, headers = api_headers, data=json.dumps(svr_payload))
 print(create_svr.text)
+
+#turn off tls1.3
+ssl_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/ssl-security"
+ssl_update_payload = {
+    "enable-tls-1-3": "No"
+}
+ssl_update_url = requests.put(ssl_url, headers = api_headers, data = json.dumps(ssl_update_payload))
+print(ssl_update_url.text)
