@@ -21,7 +21,7 @@ hostname = socket.gethostname()
 
 server = socket.gethostbyname(hostname)
 #Create certificate
-certificate_url = "http://"+waf_ip+":8000/restapi/v3.1/certificates/self-signed-certificates"
+certificate_url = "http://"+waf_ip+":8000/restapi/v3.1/certificates/self-signed-certificate"
 cert_payload = {
   "state": "CA",
   "key-size": "1024",
