@@ -36,7 +36,8 @@ cert_payload = {
   "organization-name": "Barracuda Networks"
 }
 
-cert_create_resp = requests.post(certificate_url, headers=headers, data=json.dumps(cert_payload))
+cert_create_resp = requests.post(certificate_url, headers= api_headers, data=json.dumps(cert_payload))
+
 print(cert_create_resp.text)
 
 
