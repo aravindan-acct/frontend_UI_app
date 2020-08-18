@@ -47,7 +47,7 @@ svc_payload = {
     "address-version": "IPv4",
     "ip-address": waf_ip,
     "name": "frontend_svc",
-    "port": 80,
+    "port":443,
     "status": "On",
     "type": "HTTPS",
     "certificate": "petstore"}
