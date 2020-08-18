@@ -20,6 +20,26 @@ api_headers = {"Content-Type":"application/json", "Authorization": auth_header}
 hostname = socket.gethostname()
 
 server = socket.gethostbyname(hostname)
+#Create certificate
+certificate_url = "http://"+waf_ip+":8000/restapi/v3.1/certificates/self-signed-certificates"
+cert_payload = {
+  "state": "CA",
+  "key-size": "1024",
+  "common-name": "training.petstore.com",
+  "city": "San Francisco",
+  "organizational-unit": "Training",
+  "allow-private-key-export": "Yes",
+  "name": "petstore",
+  "country-code": "US",
+  "key-type": "RSA",
+  "elliptic-curve-name": "secp256r1",
+  "organization-name": "Barracuda Networks"
+}
+
+cert_create_resp = requests.post(certificate_url, headers=headers, data=json.dumps(cert_payload))
+print(cert_create_resp.text)
+
+
 service_url = "http://"+waf_ip+":8000/restapi/v3.1/services"
 
 svc_payload = {
@@ -28,7 +48,8 @@ svc_payload = {
     "name": "frontend_svc",
     "port": 80,
     "status": "On",
-    "type": "HTTP"}
+    "type": "HTTPS",
+    "certificate": "petstore"}
 
 create_svc = requests.post(service_url, data=json.dumps(svc_payload), headers = api_headers)
 print(create_svc.text)

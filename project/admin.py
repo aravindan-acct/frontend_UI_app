@@ -159,6 +159,7 @@ def pets_menu():
     headers = {"Authorization": token.tokenstring}
     available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
     available_status_response = requests.get(available_status_url, headers=headers)
+    
     resp = dict()
     resp = json.loads(available_status_response.text)
 
