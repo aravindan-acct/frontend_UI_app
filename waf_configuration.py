@@ -72,3 +72,52 @@ ssl_update_payload = {
 }
 ssl_update_url = requests.put(ssl_url, headers = api_headers, data = json.dumps(ssl_update_payload))
 print(ssl_update_url.text)
+
+#create local-user
+
+local_user_url = "http://"+waf_ip+":8000/restapi/v3.1/local-user"
+local_user_payload = {
+    "name": "administrator",
+    "password": "administrator",
+}
+add_user_resp = requests.post(local_user_url, headers=api_headers, data=json.dumps(local_user_payload))
+print(add_user_resp.text)
+
+#enable authentication
+
+auth_enable_url = "http://"+waf_ip+":8000/restapi/v3.1/frontend_svc/authentication"
+auth_update_payload = {
+    "authentication-service": "internal",
+    "status": "On"
+}
+enable_auth_resp = requests.put(auth_enable_url, headers=api_headers, data=json.dumps(auth_update_payload))
+
+#enable authorization
+
+authorization_url = "http://"+waf_ip+":8000/restapi/v3.1/frontend_svc/authorization-policies"
+authorization_policy_payload = {
+  "allow-any-authenticated-user": "Yes",
+  "status": "On",
+  "login-method": "HTML Form",
+  "extended-match-sequence": 0,
+  "name": "policy1",
+  "host": "*",
+  "url": "/admin"
+}
+
+authorization_policy_payload_2 = {
+  "allow-any-authenticated-user": "Yes",
+  "status": "On",
+  "login-method": "HTML Form",
+  "extended-match-sequence": 0,
+  "name": "policy2",
+  "host": "*",
+  "url": "/admin/*"
+}
+
+auth_url_list = ["authorization_policy_payload","authorization_policy_payload_2"]
+
+for i in range(len(auth_url_list)):
+    authorization_rule_resp = requests.post(authorization_url, headers=api_headers, data=json.dumps(auth_url_list[i]) )
+    print(authorization_rule_resp.text)
+
