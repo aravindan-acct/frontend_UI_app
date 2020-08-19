@@ -75,7 +75,7 @@ print(ssl_update_url.text)
 
 #create local-user
 
-local_user_url = "http://"+waf_ip+":8000/restapi/v3.1/local-user"
+local_user_url = "http://"+waf_ip+":8000/restapi/v3.1/local-users"
 local_user_payload = {
     "name": "administrator",
     "password": "administrator",
@@ -85,16 +85,16 @@ print(add_user_resp.text)
 
 #enable authentication
 
-auth_enable_url = "http://"+waf_ip+":8000/restapi/v3.1/frontend_svc/authentication"
+auth_enable_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/authentication"
 auth_update_payload = {
-    "authentication-service": "internal",
-    "status": "On"
+  "authentication-service": "internal",
+  "status": "On"
 }
 enable_auth_resp = requests.put(auth_enable_url, headers=api_headers, data=json.dumps(auth_update_payload))
 
 #enable authorization
 
-authorization_url = "http://"+waf_ip+":8000/restapi/v3.1/frontend_svc/authorization-policies"
+authorization_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/authorization-policies"
 authorization_policy_payload = {
   "allow-any-authenticated-user": "Yes",
   "status": "On",
