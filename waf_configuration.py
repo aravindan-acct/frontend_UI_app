@@ -121,3 +121,4 @@ for i in range(len(auth_url_list)):
     authorization_rule_resp = requests.post(authorization_url, headers=api_headers, data=json.dumps(auth_url_list[i]) )
     print(authorization_rule_resp.text)
 
+
