@@ -91,7 +91,7 @@ auth_update_payload = {
   "status": "On"
 }
 enable_auth_resp = requests.put(auth_enable_url, headers=api_headers, data=json.dumps(auth_update_payload))
-
+print(enable_auth_resp.text)
 #enable authorization
 
 authorization_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/authorization-policies"
@@ -106,7 +106,6 @@ authorization_policy_payload = {
 }
 
 authorization_policy_payload_2 = {
-  "allow-any-authenticated-user": "Yes",
   "status": "On",
   "login-method": "HTML Form",
   "extended-match-sequence": 0,
@@ -115,7 +114,7 @@ authorization_policy_payload_2 = {
   "url": "/admin/*"
 }
 
-auth_url_list = ["authorization_policy_payload","authorization_policy_payload_2"]
+auth_url_list = [authorization_policy_payload,authorization_policy_payload_2]
 
 for i in range(len(auth_url_list)):
     authorization_rule_resp = requests.post(authorization_url, headers=api_headers, data=json.dumps(auth_url_list[i]) )
