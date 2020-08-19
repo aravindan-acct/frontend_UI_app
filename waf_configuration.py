@@ -120,4 +120,15 @@ for i in range(len(auth_url_list)):
     authorization_rule_resp = requests.post(authorization_url, headers=api_headers, data=json.dumps(auth_url_list[i]) )
     print(authorization_rule_resp.text)
 
-
+# Response rewrite to handle redirects
+resp_rewrite_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/http-response-rewrite-rules"
+resp_rewrite_payload = {
+  "old-value": "http(.*)",
+  "action": "Rewrite Header",
+  "header": "Location",
+  "sequence-number": 1,
+  "name": "location_rewrite",
+  "rewrite-value": "https$1"
+}
+resp_rewrite_resp = requests.post(resp_rewrite_url, headers=api_headers, data=json.dumps(resp_rewrite_payload))
+print(resp_rewrite_resp.text)
