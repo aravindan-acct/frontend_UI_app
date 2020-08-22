@@ -2,62 +2,38 @@
 {% block content %}
 
 <div class= "container" id="pets">
+  <table class="table is-bordered is-hoverable has-background-light is-fullwidth" id="petstable">
+    <thead class="has-text-centered">
+      <tr class="has-text-centered">
+        <th><abbr title="Name">Name</abbr></th>
+        <th><abbr title="Photo">Photo</abbr></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+      </tr>
+      </tbody>
+      </table>
+</div>
 <script>
   var pets = '{{ data|tojson }}';
   var payload = $.parseJSON(pets);
   console.log(payload);
-  var objectkey = 1;
-  var cardimage = "cardimage"+objectkey;
   Object.keys(payload).forEach(key => {
+
     console.log(payload[key]);
-    var keyname = payload[key];
-    var card = ' \
-    <div class="tile is-ancestor">\
-  <div class="tile is-vertical is-8">\
-    <div class="tile">\
-      <div class="tile is-parent is-vertical">\
-        <article class="tile is-child notification is-primary">\
-          <p class="title">Vertical...</p>\
-          <p class="subtitle">Top tile</p>\
-        </article>\
-        <article class="tile is-child notification is-warning">\
-          <p class="title">...tiles</p>\
-          <p class="subtitle">Bottom tile</p>\
-        </article>\
-      </div>\
-      <div class="tile is-parent">\
-        <article class="tile is-child notification is-info">\
-          <p class="title">Middle tile</p>\
-          <p class="subtitle">With an image</p>\
-          <figure class="image is-4by3">\
-            <img src="'+payload[key]["photo1"]+'"\
-          </figure>\
-        </article>\
-      </div>\
-    </div>\
-    <div class="tile is-parent">\
-      <article class="tile is-child notification is-danger">\
-        <p class="subtitle"> </p>\
-        <p class="subtitle"><button class="button"><a href="/addtocart?pet_id='+key+'">Add to Cart</a></button></p>\
-        <p class="subtitle"><button class="button"><a href="/removefromcart?pet_id='+key+'">Remove from Cart</a></button></p>\
-        <p class="subtitle"><button class="button"><a href="/viewcart">View Cart</a></button></p>\
-        <div class="content">\
-          <!-- Content -->\
-        </div>\
-      </article>\
-    </div>\
-  </div>\
-  <div class="tile is-parent">\
-  </div>\
-</div>\
-    ';
-    $("#pets").append(card);
-    
-    objectkey = objectkey+1;
+    var name = payload[key]["name"];
+    var photo1 = payload[key]["photo1"]
+    var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+name+'</td>\
+      <td class="has-text-centered"> <img src='+photo1+' width="200" height="200">\
+        <p><button class="button"><a href="/addtocart?pet_id='+key+'">Add to Cart</a></button></p>\
+        <p><button class="button"><a href="/removefromcart?pet_id='+key+'">Remove from Cart</a></button></p></td>\
+      </tr>';
+    $("#petstable").append(petname_row);
     });
   
-
 </script>
-</div>
+
 
 {% endblock%}

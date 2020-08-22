@@ -14,8 +14,8 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    callback_ip = os.environ['WAFPublicIP']
-    return render_template('admin.html', callback_ip = callback_ip)
+    #callback_ip = os.environ['WAFPublicIP']
+    return render_template('admin.html')
 
 
 '''
@@ -157,7 +157,7 @@ def pets_delete():
 def pets_menu():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
     headers = {"Authorization": token.tokenstring}
-    available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
+    available_status_url = backend_url+"/pet/findByStatus?status=available&status1=pending&status2=sold"
     available_status_response = requests.get(available_status_url, headers=headers)
     
     resp = dict()
@@ -171,32 +171,45 @@ def pets_menu():
 @admin.route('/admin/uploadsampledata')
 def uploadsampledata():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
-    try:
-        available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
-        headers = {"Authorization": token.tokenstring}
-        available_status_response = requests.get(available_status_url, headers=headers)
-        resp = dict()
-        resp = json.loads(available_status_response.text)
-        if len(resp) > 0:
-            return redirect('/admin/all_pets')
-        else:
-            with open("/frontend_UI_app/project/pets_data.json") as sample_file:
-                file_content=sample_file.read()
-                data=json.loads(file_content)
-            for keys,val in data.items():
-            
-                pet_url = backend_url+"/pet"
-            
-                headers = {"Authorization": token.tokenstring,
-                       "Content-Type": "application/x-www-form-urlencoded"}
-        
-                response = requests.post(pet_url, headers=headers, data=urlencode(val))
-        
-            return redirect('/admin/all_pets')
     
-    except:
-        print("error loading sample data")
+    available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
+    headers = {"Authorization": token.tokenstring}
+    available_status_response = requests.get(available_status_url, headers=headers)
+    resp = dict()
+    resp = json.loads(available_status_response.text)
+    
+    if len(resp) >= 1:
+        print("data exists")
         return redirect('/admin/all_pets')
+    else:
+        print(os.getcwd())
+        with open("project/pets_data.json") as sample_file:
+            file_content=sample_file.read()
+            print(file_content)
+            data=json.loads(file_content)
+        for keys,val in data.items():
+            
+            pet_url = backend_url+"/pet"
+            
+            headers = {"Authorization": token.tokenstring,
+                       "Content-Type": "application/x-www-form-urlencoded"}
+            print("val is {}".format(val))
+            tags = list()
+            tags.append(val["tag_1"])
+            tags.append(val["tag_2"])
+            photoUrls=list()
+            photoUrls.append(val["photo_1"])
+            photoUrls.append(val["photo_2"])
+            payload = {
+                "name": val["name"],
+                "tags": tags,
+                "photoUrls": photoUrls,
+                "status": val["status"]
+            }
+            response = requests.post(pet_url, headers=headers, data=urlencode(payload))
+        
+        return redirect('/admin/all_pets')
+
     
 @admin.route('/admin/addpet', methods=['POST'])
 def addpet():

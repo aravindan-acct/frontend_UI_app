@@ -2,5 +2,36 @@
 
 {% block content%}
 
-<h1> {{ profile }}</h1>
+<div class= "container" id="user">
+    <table class="table is-bordered is-hoverable has-background-light" id="profiletable">
+      <thead class="has-text-centered">
+        <tr class="has-text-centered">
+          <th><abbr title="FirstName">FirstName</abbr></th>
+          <th><abbr title="LastName">LastName</abbr></th>
+          <th><abbr title="UserName">UserName</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  
+        </tr>
+        </tbody>
+        </table>
+  </div>
+  <script>
+    var user = '{{ profile|tojson }}';
+    var payload = $.parseJSON(user);
+    console.log(payload);
+    
+      var firstname = payload["firstName"];
+      var lastname = payload["lastName"]
+      var username = payload["username"]
+      var user_row = '<tr><td class="has-text-centered">'+firstname+'</td>\
+        <td class="has-text-centered">'+lastname+'</td>\
+        <td class="has-text-centered">'+username+'</td>\
+        </tr>';
+      
+      $("#profiletable").append(user_row);
+    
+  </script>
 {% endblock%}
