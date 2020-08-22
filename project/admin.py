@@ -14,8 +14,8 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    #callback_ip = os.environ['WAFPublicIP']
-    return render_template('admin.html')
+    callback_ip = os.environ['WAFPublicIP']
+    return render_template('admin.html', callback_ip = callback_ip)
 
 
 '''
@@ -183,7 +183,7 @@ def uploadsampledata():
         return redirect('/admin/all_pets')
     else:
         print(os.getcwd())
-        with open("project/pets_data.json") as sample_file:
+        with open("/frontend_UI_app/project/pets_data.json") as sample_file:
             file_content=sample_file.read()
             print(file_content)
             data=json.loads(file_content)
