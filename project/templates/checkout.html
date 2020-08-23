@@ -1,6 +1,6 @@
 {% extends "pets_base.html" %}
 {% block content %}
-<button class="button" id="viewcart">View Cart</button>
+<button class="button" id="viewcart"><a href="/viewcart">View Cart</a></button>
 <form class="form" method="POST" action="/shippinginfo">
     <div class="field">
         <div class="control">
@@ -8,8 +8,9 @@
         </div>
     </div>
 
-    <button class="button is-block is-info is-large is-fullwidth"><a href="/viewcart">Place Order</a></button>
+    <button class="button is-block is-info is-large is-fullwidth"><a href="/placeorder">Place Order</a></button>
 </form>
+
 </div>
 </div>
 {% endblock%}
