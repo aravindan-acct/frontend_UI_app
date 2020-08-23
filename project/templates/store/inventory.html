@@ -28,7 +28,9 @@
     var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+name+'</td>\
       <td class="has-text-centered"> <img src='+photo1+' width="200" height="200">\
         <p><button class="button"><a href="/addtocart?pet_id='+key+'">Add to Cart</a></button></p>\
-        <p><button class="button"><a href="/removefromcart?pet_id='+key+'">Remove from Cart</a></button></p></td>\
+        <p><button class="button"><a href="/removefromcart?pet_id='+key+'">Remove from Cart</a></button></p>\
+        <p><button class="button" id="viewcart"><a href="/viewcart">View Cart</a></button></p>\
+        </td>\
       </tr>';
     $("#petstable").append(petname_row);
     });

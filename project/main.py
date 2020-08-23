@@ -155,11 +155,25 @@ def addtocart():
     pet_id = request.args["pet_id"]
     cart = Carts.query.filter_by(username = current_user.username).first()
     cart_id = cart.id
-    new_cart_item = CartItems(pet_id = pet_id, cart_id=cart_id)
-    db.session.add(new_cart_item)
-    db.session.commit()
+    cart_items = CartItems.query.all()
     
-    return render_template('pets.html')
+    data=[]
+    print(len(cart_items))
+    for i in range(len(cart_items)):
+        print(cart_items[i])
+        data.append(cart_items[i].pet_id )
+        print(data)
+    
+    if int(pet_id) in data:
+        print("item already added")
+    else:
+        print(type(pet_id))
+        print("not in list")
+        new_cart_item = CartItems(pet_id = pet_id, cart_id=cart_id)
+        db.session.add(new_cart_item)
+        db.session.commit()
+    
+    return redirect('/allpets')
 
 @main.route('/removefromcart', methods=['GET'])
 @login_required
@@ -168,22 +182,33 @@ def removefromcart():
     pet_id = request.args["pet_id"]
     cart = Carts.query.filter_by(username = current_user.username).first()
     cart_id = cart.id
-    new_cart_item = CartItems(pet_id = pet_id, cart_id=cart_id)
-    db.session.delete(new_cart_item)
+    cart_items = CartItems.query.filter_by(pet_id = int(pet_id)).first()
+
+    print("printing the item to be deleted")
+    print(cart_items)
+    
+    db.session.delete(cart_items)
     db.session.commit()
-    return render_template('pets.html')
+    return redirect('/allpets')
 
 @main.route('/viewcart', methods=['GET'])
 @login_required
 def viewcart():
     cart_items = CartItems.query.all()
-    data={}
+    data=[]
+    print(len(cart_items))
     for i in range(len(cart_items)):
         print(cart_items[i])
-        data.update({
-            "pet_id": cart_items[i].pet_id
-        })
-    return render_template('viewcart.html', data = data)
+        data.append(cart_items[i].pet_id )
+        print(data)
+    data_to_display = {}
+    num_of_items = len(data)
+    data_to_display.update({
+        "total_items": num_of_items,
+        "Items": data
+    })
+    print(data_to_display)
+    return render_template('viewcart.html', data = data_to_display)
 
 @main.route('/orderdetails.html', methods=['GET'])
 @login_required
