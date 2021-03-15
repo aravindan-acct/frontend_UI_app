@@ -38,4 +38,5 @@ decoded_json = json.loads(b64_decoded)
 
 with open("waf_json", "w") as waf_json:
     waf_json.write(json.dumps(decoded_json))
+    os.system(f'export WAFIP={decoded_json["waf_ip"]}')
     waf_json.close()
