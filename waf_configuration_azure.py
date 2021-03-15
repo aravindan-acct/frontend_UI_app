@@ -8,7 +8,9 @@ import os
 with open("waf_json") as waf_json:
   waf_params = json.loads(waf_json)
   waf_ip = waf_params["waf_ip"]
+  print(waf_ip)
   waf_password = waf_params["waf_password"]
+  print(waf_password)
   waf_json.close()
 
 headers = {"Content-Type": "application/json"}
