@@ -36,5 +36,6 @@ b64_decoded = base64.b64decode(b64_data)
 
 decoded_json = json.loads(b64_decoded)
 
-os.environ["WAFIP"] = decoded_json["waf_ip"]
-os.environ["WAFPASSWORD"] = decoded_json["waf_password"]
+with open("waf_json", "w") as waf_json:
+    waf_json.write(decoded_json)
+    waf_json.close()
