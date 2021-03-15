@@ -6,10 +6,12 @@ import os
 
 
 with open("waf_json") as waf_json:
-  waf_params = json.loads(waf_json)
-  waf_ip = waf_params["waf_ip"]
+  waf_params = waf_json.read()
+  print(type(waf_params))
+  waf_info = json.loads(waf_params)
+  waf_ip = waf_info["waf_ip"]
   print(waf_ip)
-  waf_password = waf_params["waf_password"]
+  waf_password = waf_info["waf_password"]
   print(waf_password)
   waf_json.close()
 
