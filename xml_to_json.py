@@ -4,8 +4,9 @@
 # import json module and xmltodict 
 # module provided by python 
 import json 
-import xmltodict 
-
+import xmltodict
+import base64
+import os
 
 # open the input xml file and read 
 # data in form of python dictionary 
@@ -31,3 +32,9 @@ with open("data.json") as json_file:
     json_file.close()
 
 b64_data = json_val["ns0:Environment"]["ns1:ProvisioningSection"]["ns1:LinuxProvisioningConfigurationSet"]["ns1:CustomData"]
+b64_decoded = base64.b64decode(b64_data)
+
+decoded_json = json.loads(b64_decoded)
+
+os.environ["WAFIP"] = decoded_json["waf_ip"]
+os.environ["WAFPASSWORD"] = decoded_json["waf_password"]
