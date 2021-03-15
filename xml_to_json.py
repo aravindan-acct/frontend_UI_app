@@ -30,4 +30,4 @@ with open("data.json") as json_file:
     json_val = json.loads(json_file.read())
     json_file.close()
 
-print(json_val.keys())
+b64_data = json_val["ns0:Environment"]["ns1:ProvisioningSection"]["ns1:LinuxProvisioningConfigurationSet"]["ns1:CustomData"]
