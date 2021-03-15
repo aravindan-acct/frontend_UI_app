@@ -30,4 +30,4 @@ with open("data.json") as json_file:
     json_val = json.loads(json_file.read())
     json_file.close()
 
-print(json_val)
+print(json_val.keys())
