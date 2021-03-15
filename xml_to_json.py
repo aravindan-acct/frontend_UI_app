@@ -24,4 +24,10 @@ with open("ovf-env.xml") as xml_file:
 	# json file 
 	with open("data.json", "w") as json_file: 
 		json_file.write(json_data) 
-		json_file.close() 
+		json_file.close()
+
+with open("data.json") as json_file:
+    json_val = json.loads(json_file.read())
+    json_file.close()
+
+print(json_val)
