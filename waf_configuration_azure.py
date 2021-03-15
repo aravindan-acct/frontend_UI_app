@@ -4,8 +4,12 @@ import json
 from http_basic_auth import generate_header, parse_header
 import os
 
-waf_ip = os.environ['WAFIP']
-waf_password = os.environ['WAFPASSWORD']
+
+with open("waf_json") as waf_json:
+  waf_params = json.loads(waf_json)
+  waf_ip = waf_json["waf_ip"]
+  waf_password = waf_json["waf_password"]
+  waf_json.close()
 
 headers = {"Content-Type": "application/json"}
 login_url = "http://"+waf_ip+":8000/restapi/v3.1/login"
