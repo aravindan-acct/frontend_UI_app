@@ -77,6 +77,8 @@ print(create_svr.text)
 #turn off tls1.3
 ssl_url = "http://"+waf_ip+":8000/restapi/v3.1/services/frontend_svc/ssl-security"
 ssl_update_payload = {
+    "enable-tls-1": "Yes",
+    "enable-tls-1-2": "Yes",
     "enable-tls-1-3": "No"
 }
 ssl_update_url = requests.put(ssl_url, headers = api_headers, data = json.dumps(ssl_update_payload))
