@@ -11,7 +11,7 @@ Deployment options:
 
     b. `export apiserver=<ip of the backend petstore api server>`
 
-2. Deployment with an upstream Barracuda WAF:
+2. Deployment with an upstream Barracuda WAF. This option assumes that a Barracuda WAF instance has already been deployed as the upstream waf:
     
     Create environment variables and 'touch' a file:
 
