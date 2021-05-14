@@ -14,16 +14,13 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    callback_ip = os.environ['WAFPublicIP']
+    if os.path.exists('/tmp/withwaf.txt'):
+        callback_ip = os.environ['WAFPublicIP']
+    else:
+        callback_ip = os.environ['publicip']
     return render_template('admin.html', callback_ip = callback_ip)
 
 
-'''
-@admin.route('/admin', methods=['POST'])
-def administrator_login():
-
-    return render_template('Callback.html')
-'''
 @admin.route('/home')
 def callback():
     
