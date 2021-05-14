@@ -16,9 +16,14 @@ admin = Blueprint('admin', __name__)
 def administrator():
     if os.path.exists('/tmp/withwaf.txt'):
         callback_ip = os.environ['WAFPublicIP']
+        callback_proto = "https"
+        callback_port = "443"
     else:
         callback_ip = os.environ['publicip']
-    return render_template('admin.html', callback_ip = callback_ip)
+        callback_proto = "http"
+        callback_port = "7979"
+    return render_template('admin.html', callback_ip = callback_ip, callback_proto = callback_proto, 
+                            callback_port = callback_port)
 
 
 @admin.route('/home')
