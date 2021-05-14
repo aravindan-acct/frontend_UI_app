@@ -13,13 +13,16 @@ Deployment options:
 
 2. Deployment with an upstream Barracuda WAF:
     
-    Create environment variables:
+    Create environment variables and 'touch' a file:
 
     a. `export WAFIP=<private ip of the waf>`
         
         Note: This is also the ip on which the api server can be accessed  through the waf
 
     b. `export WAFPublicIP=<public ip of the waf>`
+
+    c. `touch /tmp/withwaf.txt`  - This file is checked during the server initialization.
+
 
 
 Please note that the 2nd deployment option is best used with the following repos.These above repos provide templates to provision the entire setup for a lab environment with barracuda waf and petstore:
