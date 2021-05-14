@@ -17,7 +17,7 @@ Deployment options:
 
     a. `export WAFIP=<private ip of the waf>`
         
-        this is also the ip on which the api server can be accessed  through the waf>
+        Note: This is also the ip on which the api server can be accessed  through the waf
 
     b. `export WAFPublicIP=<public ip of the waf>`
 
