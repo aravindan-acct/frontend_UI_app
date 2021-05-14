@@ -12,8 +12,12 @@ Deployment options:
     b. `export apiserver=<ip of the backend petstore api server>`
 
 2. Deployment with an upstream Barracuda WAF:
+    
+    Create environment variables:
 
-    a. `export WAFIP=<private ip of the waf. this is also the ip on which the api server can be accessed  through the waf>`
+    a. `export WAFIP=<private ip of the waf>`
+        
+        this is also the ip on which the api server can be accessed  through the waf>
 
     b. `export WAFPublicIP=<public ip of the waf>`
 
