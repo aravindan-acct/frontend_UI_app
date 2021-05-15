@@ -2,7 +2,7 @@
 
 This application acts as the frontend web tier to the petstore application available at: https://github.com/aravindan-acct/petstore
 
-Deployment options:
+## Deployment options:
 1. Independent deployment: To deploy the application as a standalone server, the following needs to be done on the instance/server:
 
     Create environment variables:
@@ -23,7 +23,7 @@ Deployment options:
 
     c. `touch /tmp/withwaf.txt`  - This file is checked during the server initialization.
 
-
+## Important Note
 
 Please note that the 2nd deployment option is best used with the following repos.These above repos provide templates to provision the entire setup for a lab environment with barracuda waf and petstore:
 
