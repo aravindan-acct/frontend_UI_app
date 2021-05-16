@@ -185,7 +185,8 @@ def uploadsampledata():
         return redirect('/admin/all_pets')
     else:
         print(os.getcwd())
-        with open("/frontend_UI_app/project/pets_data.json") as sample_file:
+        directory = os.getcwd()
+        with open(f"{directory}"+"project/pets_data.json") as sample_file:
             file_content=sample_file.read()
             print(file_content)
             data=json.loads(file_content)

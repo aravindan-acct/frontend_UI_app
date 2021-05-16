@@ -1,7 +1,9 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-
+from tornado.wsgi import WSGIContainer
+from tornado.httpserver import HTTPServer
+from tornado.ioloop import IOLoop
 
 db = SQLAlchemy()
 
@@ -47,7 +49,9 @@ def create_app():
     return app
 def main():
     app = create_app()
-    app.run(host="0.0.0.0",port=7979,debug=True)
+    http_server = HTTPServer(WSGIContainer(app))
+    http_server.listen(7979)
+    IOLoop.instance().start()
 
 if __name__ == "__main__":
     main()
