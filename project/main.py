@@ -186,10 +186,12 @@ def removefromcart():
 
     print("printing the item to be deleted")
     print(cart_items)
-    
-    db.session.delete(cart_items)
-    db.session.commit()
-    return redirect('/allpets')
+    if cart_items == None:
+        return redirect('/allpets')
+    else:
+        db.session.delete(cart_items)
+        db.session.commit()
+        return redirect('/allpets')
 
 @main.route('/viewcart', methods=['GET'])
 @login_required
