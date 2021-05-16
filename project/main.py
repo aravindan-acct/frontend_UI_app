@@ -146,7 +146,7 @@ def shippinginfo():
             print("approving the transactions")
             active_transactions[i].status = "approved"
             db.session.commit()
-        return render_template(url_for('main.orderdetails'))
+        return render_template(url_for('main.placeorder'))
 
 @main.route('/addtocart', methods=['GET'])
 @login_required
@@ -211,6 +211,7 @@ def viewcart():
     })
     print(data_to_display)
     return render_template('viewcart.html', data = data_to_display)
+
 
 @main.route('/placeorder', methods=['GET'])
 @login_required
