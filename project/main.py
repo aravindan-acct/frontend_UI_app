@@ -146,7 +146,7 @@ def shippinginfo():
             print("approving the transactions")
             active_transactions[i].status = "approved"
             db.session.commit()
-        return render_template(url_for('main.placeorder'))
+        return render_template(url_for('main.orderdetails'))
 
 @main.route('/addtocart', methods=['GET'])
 @login_required
