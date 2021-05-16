@@ -13,9 +13,9 @@ This application acts as the frontend web tier to the petstore application avail
 
     c. Start the web server:
 
-        `cd frontend_UI_app`
+        cd frontend_UI_app
         
-        `python3 -m project`
+        python3 -m project
 
 2. Deployment with an upstream Barracuda WAF. This option assumes that a Barracuda WAF instance has already been deployed as the upstream waf:
     
