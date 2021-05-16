@@ -11,6 +11,12 @@ This application acts as the frontend web tier to the petstore application avail
 
     b. `export apiserver=<ip of the backend petstore api server>`
 
+    c. Start the web server:
+
+        `cd frontend_UI_app`
+        
+        `python3 -m project`
+
 2. Deployment with an upstream Barracuda WAF. This option assumes that a Barracuda WAF instance has already been deployed as the upstream waf:
     
     Create environment variables and 'touch' a file:
@@ -22,6 +28,7 @@ This application acts as the frontend web tier to the petstore application avail
     b. `export WAFPublicIP=<public ip of the waf>`
 
     c. `touch /tmp/withwaf.txt`  - This file is checked during the server initialization.
+
 
 ## Important Note
 
