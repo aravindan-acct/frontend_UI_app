@@ -210,7 +210,7 @@ def viewcart():
     print(data_to_display)
     return render_template('viewcart.html', data = data_to_display)
 
-@main.route('/orderdetails.html', methods=['GET'])
+@main.route('/placeorder', methods=['GET'])
 @login_required
 def orderdetails():
     return render_template('orderdetails.html')
