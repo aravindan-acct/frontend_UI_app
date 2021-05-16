@@ -186,7 +186,7 @@ def uploadsampledata():
     else:
         print(os.getcwd())
         directory = os.getcwd()
-        with open(f"{directory}"+"project/pets_data.json") as sample_file:
+        with open(f"{directory}"+"/project/pets_data.json") as sample_file:
             file_content=sample_file.read()
             print(file_content)
             data=json.loads(file_content)
