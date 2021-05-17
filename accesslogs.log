@@ -1,0 +1,2150 @@
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 487.90ms
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    logging.info(profile_resp.text)
+NameError: name 'logging' is not defined
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 549.47ms
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    log.info(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'info'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 578.42ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    log(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'info'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 661.51ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    log(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'info'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 535.60ms
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET / (127.0.0.1) 19.54ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    log(profile_resp.text)
+TypeError: 'NoneType' object is not callable
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 612.14ms
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET / (127.0.0.1) 21.41ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 686.63ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    log.INFO(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'INFO'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 637.62ms
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET / (127.0.0.1) 23.89ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 30, in profile
+    log.INFO(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'INFO'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 616.86ms
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET / (127.0.0.1) 25.37ms
+INFO:tornado.access:200 GET /pets (127.0.0.1) 11.21ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 470.81ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 29, in profile
+    log.INFO(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'INFO'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 638.75ms
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+INFO:tornado.access:200 GET /profile (127.0.0.1) 641.50ms
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 31, in profile
+    log.info(profile_resp.text)
+AttributeError: 'NoneType' object has no attribute 'info'
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 572.15ms
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+INFO:tornado.access:200 GET /profile (127.0.0.1) 659.64ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+INFO:tornado.access:200 GET /profile (127.0.0.1) 491.36ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 31, in profile
+    logs(profile_resp.text)
+TypeError: 'NoneType' object is not callable
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 472.10ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET / (127.0.0.1) 25.68ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+ERROR:__main__:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 31, in profile
+    logger(profile_resp.text)
+TypeError: 'Logger' object is not callable
+ERROR:tornado.access:500 GET /profile (127.0.0.1) 479.83ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 673.16ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 674.87ms
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.61ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 645.14ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.60ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 7>]
+INFO:project:[<Transactions 7>]
+order details
+INFO:project:order details
+[<TransactionDetails 7>]
+INFO:project:[<TransactionDetails 7>]
+{'pet_id': 1, 'transactionDetailsId': 7, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 7, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 557.59ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 615.89ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.09ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 2.48ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 631.96ms
+INFO:tornado.access:200 GET /viewcart (127.0.0.1) 4.44ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 2.65ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 8>]
+INFO:project:[<Transactions 8>]
+order details
+INFO:project:order details
+[<TransactionDetails 8>]
+INFO:project:[<TransactionDetails 8>]
+{'pet_id': 1, 'transactionDetailsId': 8, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 8, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 607.60ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 615.43ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /pets (127.0.0.1) 21.48ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 547.83ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.86ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 593.50ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.02ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 9>]
+INFO:project:[<Transactions 9>]
+order details
+INFO:project:order details
+[<TransactionDetails 9>]
+INFO:project:[<TransactionDetails 9>]
+{'pet_id': 1, 'transactionDetailsId': 9, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 9, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 665.41ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+active transacations []
+INFO:project:active transacations []
+[<Transactions 10>]
+INFO:project:[<Transactions 10>]
+order details
+INFO:project:order details
+[<TransactionDetails 10>]
+INFO:project:[<TransactionDetails 10>]
+{'pet_id': 1, 'transactionDetailsId': 10, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 10, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 608.66ms
+INFO:tornado.access:200 GET /contactus (127.0.0.1) 11.06ms
+INFO:tornado.access:200 GET /aboutus (127.0.0.1) 4.71ms
+INFO:tornado.access:302 GET /logout (127.0.0.1) 10.28ms
+INFO:tornado.access:200 GET / (127.0.0.1) 2.79ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET / (127.0.0.1) 14.37ms
+INFO:tornado.access:200 GET /login (127.0.0.1) 4.71ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/login?username=aravindan&password=secret HTTP/1.1" 200 32
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+INFO:tornado.access:302 POST /login (127.0.0.1) 960.53ms
+INFO:tornado.access:200 GET /pets (127.0.0.1) 13.01ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 473.47ms
+INFO:tornado.access:200 GET /static/profile.js (127.0.0.1) 3.12ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 476.17ms
+INFO:tornado.access:200 GET /static/profile.js (127.0.0.1) 2.45ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 494.73ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 473.11ms
+INFO:tornado.access:200 GET /static/profile.js (127.0.0.1) 3.25ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /pets (127.0.0.1) 21.72ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 468.88ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 487.47ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 473.90ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 473.50ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 491.77ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 496.61ms
+INFO:tornado.access:302 GET /checkout (127.0.0.1) 3.74ms
+INFO:tornado.access:200 GET /pets (127.0.0.1) 2.91ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 460.91ms
+0
+INFO:project:0
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 9.80ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 461.54ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.15ms
+ERROR:__main__:Exception on /placeorder [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 222, in orderdetails
+    return render_template('orderdetails.html')
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 1, in top-level template code
+    {% extends "pets_base.html" %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/pets_base.html", line 72, in top-level template code
+    {% block content %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 5, in block "content"
+    <p> <br> {{ payload|tojson }}
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+ERROR:tornado.access:500 GET /placeorder (127.0.0.1) 14.62ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 21.03ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 472.82ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.01ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 460.48ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.70ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 11>]
+INFO:project:[<Transactions 11>]
+order details
+INFO:project:order details
+[<TransactionDetails 11>]
+INFO:project:[<TransactionDetails 11>]
+{'pet_id': 1, 'transactionDetailsId': 11, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 11, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 473.73ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 485.27ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 474.77ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.08ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 535.71ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.18ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 3.52ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 570.24ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 537.82ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 7.01ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 769.63ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.52ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 12>]
+INFO:project:[<Transactions 12>]
+order details
+INFO:project:order details
+[<TransactionDetails 12>]
+INFO:project:[<TransactionDetails 12>]
+{'pet_id': 1, 'transactionDetailsId': 12, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 12, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 687.19ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 486.35ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 477.31ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.16ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 688.99ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.07ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 13>]
+INFO:project:[<Transactions 13>]
+order details
+INFO:project:order details
+[<TransactionDetails 13>]
+INFO:project:[<TransactionDetails 13>]
+{'pet_id': 1, 'transactionDetailsId': 13, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 13, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 646.69ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /contactus (127.0.0.1) 22.08ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 705.55ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.54ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 631.21ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.71ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 14>]
+INFO:project:[<Transactions 14>]
+order details
+INFO:project:order details
+[<TransactionDetails 14>]
+INFO:project:[<TransactionDetails 14>]
+{'pet_id': 1, 'transactionDetailsId': 14, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 14, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 646.41ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /aboutus (127.0.0.1) 22.45ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 747.02ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 564.37ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.99ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 461.99ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.98ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 15>]
+INFO:project:[<Transactions 15>]
+order details
+INFO:project:order details
+[<TransactionDetails 15>]
+INFO:project:[<TransactionDetails 15>]
+{'pet_id': 1, 'transactionDetailsId': 15, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 15, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 615.61ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 485.78ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 612.22ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.25ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 620.64ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.79ms
+ERROR:__main__:Exception on /placeorder [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 222, in orderdetails
+    return render_template('orderdetails.html')
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 1, in top-level template code
+    {% extends "pets_base.html" %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/pets_base.html", line 72, in top-level template code
+    {% block content %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 20, in block "content"
+    <script>    var transaction = '{{ payload|tojson }}';
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+ERROR:tornado.access:500 GET /placeorder (127.0.0.1) 11.12ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 647.20ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.25ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 700.09ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.60ms
+ERROR:__main__:Exception on /placeorder [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 222, in orderdetails
+    return render_template('orderdetails.html')
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 1, in top-level template code
+    {% extends "pets_base.html" %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/pets_base.html", line 72, in top-level template code
+    {% block content %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 20, in block "content"
+    <script>    var transaction = '{{ payload|tojson }}';
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+ERROR:tornado.access:500 GET /placeorder (127.0.0.1) 9.79ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 496.72ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 554.90ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.65ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 611.67ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.81ms
+ERROR:__main__:Exception on /placeorder [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 222, in orderdetails
+    return render_template('orderdetails.html')
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 1, in top-level template code
+    {% extends "pets_base.html" %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/pets_base.html", line 72, in top-level template code
+    {% block content %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 20, in block "content"
+    <script>    var transaction = '{{ payload|tojson }}';
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+ERROR:tornado.access:500 GET /placeorder (127.0.0.1) 10.17ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.22ms
+ERROR:__main__:Exception on /placeorder [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 222, in orderdetails
+    return render_template('orderdetails.html')
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 1, in top-level template code
+    {% extends "pets_base.html" %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/pets_base.html", line 72, in top-level template code
+    {% block content %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 20, in block "content"
+    <script>    var transaction = '{{ payload|tojson }}';
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+ERROR:tornado.access:500 GET /placeorder (127.0.0.1) 4.82ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 2.22ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 16>]
+INFO:project:[<Transactions 16>]
+order details
+INFO:project:order details
+[<TransactionDetails 16>]
+INFO:project:[<TransactionDetails 16>]
+{'pet_id': 1, 'transactionDetailsId': 16, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 16, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+ERROR:__main__:Exception on /shippinginfo [POST]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 152, in shippinginfo
+    return render_template('orderdetails.html', payload = json.loads(payload))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+ERROR:tornado.access:500 POST /shippinginfo (127.0.0.1) 475.79ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 29.44ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 655.93ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 468.17ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.17ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 467.53ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.85ms
+ERROR:__main__:Exception on /placeorder [GET]
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 222, in orderdetails
+    return render_template('orderdetails.html')
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 1, in top-level template code
+    {% extends "pets_base.html" %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/pets_base.html", line 72, in top-level template code
+    {% block content %}
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/templates/orderdetails.html", line 20, in block "content"
+    <script>    var transaction = '{{ payload|tojson }}';
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+ERROR:tornado.access:500 GET /placeorder (127.0.0.1) 10.43ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 22.30ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 600.61ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 7.11ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 665.05ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.57ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 17>]
+INFO:project:[<Transactions 17>]
+order details
+INFO:project:order details
+[<TransactionDetails 17>]
+INFO:project:[<TransactionDetails 17>]
+{'pet_id': 1, 'transactionDetailsId': 17, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 17, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 706.25ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 19.68ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 619.62ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 590.21ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 3.79ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 559.20ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.91ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 4.58ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 21.34ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 734.40ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.60ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 695.99ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.03ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 5.20ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 25.27ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 630.99ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.42ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 619.75ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.47ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 4.78ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 24.33ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 507.57ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 7.09ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 465.59ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.07ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 4.49ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 25.32ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 758.70ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.21ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 500.00ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.19ms
+INFO:tornado.access:200 GET /placeorder (127.0.0.1) 4.65ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 658.25ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 7.43ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 458.82ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.03ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.73ms
+WARNING:tornado.access:405 GET /shippinginfo (127.0.0.1) 1.16ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 22.09ms
+INFO:tornado.access:200 GET /pets (127.0.0.1) 5.32ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 656.98ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 4.85ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 570.76ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.76ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 18>]
+INFO:project:[<Transactions 18>]
+order details
+INFO:project:order details
+[<TransactionDetails 18>]
+INFO:project:[<TransactionDetails 18>]
+{'pet_id': 1, 'transactionDetailsId': 18, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 18, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 557.31ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 23.26ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 634.52ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.43ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 624.33ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.59ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 3.57ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 19>]
+INFO:project:[<Transactions 19>]
+order details
+INFO:project:order details
+[<TransactionDetails 19>]
+INFO:project:[<TransactionDetails 19>]
+{'pet_id': 1, 'transactionDetailsId': 19, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 19, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 689.54ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 23.29ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 663.60ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.22ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 1368.07ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.16ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.41ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 20>]
+INFO:project:[<Transactions 20>]
+order details
+INFO:project:order details
+[<TransactionDetails 20>]
+INFO:project:[<TransactionDetails 20>]
+{'pet_id': 1, 'transactionDetailsId': 20, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 20, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 654.59ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+INFO:tornado.access:200 GET /pets (127.0.0.1) 20.33ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 741.40ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.84ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 715.80ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.52ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.46ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 21>]
+INFO:project:[<Transactions 21>]
+order details
+INFO:project:order details
+[<TransactionDetails 21>]
+INFO:project:[<TransactionDetails 21>]
+{'pet_id': 1, 'transactionDetailsId': 21, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 21, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 582.14ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 487.90ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.02ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 464.66ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.42ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.34ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 22>]
+INFO:project:[<Transactions 22>]
+order details
+INFO:project:order details
+[<TransactionDetails 22>]
+INFO:project:[<TransactionDetails 22>]
+{'pet_id': 1, 'transactionDetailsId': 22, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 22, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 612.86ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 554.74ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.27ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 459.81ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.89ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 23>]
+INFO:project:[<Transactions 23>]
+order details
+INFO:project:order details
+[<TransactionDetails 23>]
+INFO:project:[<TransactionDetails 23>]
+{'pet_id': 1, 'transactionDetailsId': 23, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 23, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 540.59ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 627.42ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.38ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 24>]
+INFO:project:[<Transactions 24>]
+order details
+INFO:project:order details
+[<TransactionDetails 24>]
+INFO:project:[<TransactionDetails 24>]
+{'pet_id': 1, 'transactionDetailsId': 24, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 24, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 582.77ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 491.08ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 4.50ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 660.91ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.54ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.18ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 25>]
+INFO:project:[<Transactions 25>]
+order details
+INFO:project:order details
+[<TransactionDetails 25>]
+INFO:project:[<TransactionDetails 25>]
+{'pet_id': 1, 'transactionDetailsId': 25, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 25, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 667.43ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 559.16ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 6.59ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 467.91ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.37ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.31ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 26>]
+INFO:project:[<Transactions 26>]
+order details
+INFO:project:order details
+[<TransactionDetails 26>]
+INFO:project:[<TransactionDetails 26>]
+{'pet_id': 1, 'transactionDetailsId': 26, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 26, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 579.59ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 615.53ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 7.57ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 602.51ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 3.35ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 27>]
+INFO:project:[<Transactions 27>]
+order details
+INFO:project:order details
+[<TransactionDetails 27>]
+INFO:project:[<TransactionDetails 27>]
+{'pet_id': 1, 'transactionDetailsId': 27, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 27, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 606.57ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 646.67ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 4.69ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 468.67ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 4.14ms
+INFO:tornado.access:302 GET /placeorder (127.0.0.1) 2.14ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 28>]
+INFO:project:[<Transactions 28>]
+order details
+INFO:project:order details
+[<TransactionDetails 28>]
+INFO:project:[<TransactionDetails 28>]
+{'pet_id': 1, 'transactionDetailsId': 28, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 28, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 GET /shippinginfo (127.0.0.1) 481.40ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/http1connection.py", line 273, in _read_message
+    delegate.finish()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/httpserver.py", line 280, in finish
+    self.request_callback(self.request)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/wsgi.py", line 114, in __call__
+    WSGIContainer.environ(request), start_response
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 47, in inventory
+    resp = requests.get(get_inventory_url, headers=headers)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 1321, in getresponse
+    response.begin()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/http1connection.py", line 273, in _read_message
+    delegate.finish()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/httpserver.py", line 280, in finish
+    self.request_callback(self.request)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/wsgi.py", line 114, in __call__
+    WSGIContainer.environ(request), start_response
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 47, in inventory
+    resp = requests.get(get_inventory_url, headers=headers)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 1321, in getresponse
+    response.begin()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+INFO:tornado.access:200 GET /pets (127.0.0.1) 17.65ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+ERROR:tornado.application:Uncaught exception
+Traceback (most recent call last):
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/http1connection.py", line 273, in _read_message
+    delegate.finish()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/httpserver.py", line 280, in finish
+    self.request_callback(self.request)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/tornado/wsgi.py", line 114, in __call__
+    WSGIContainer.environ(request), start_response
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/aravindan/Documents/Dev-Tools/frontend_UI_app/project/main.py", line 30, in profile
+    profile_resp = requests.get(get_profile_url)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 1016, in _send_output
+    self.send(msg)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/http/client.py", line 956, in send
+    self.connect()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/Users/aravindan/Documents/python_dir/frontend_UI_app/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 596.17ms
+1
+INFO:project:1
+item already added
+INFO:project:item already added
+INFO:tornado.access:302 GET /addtocart?pet_id=1 (127.0.0.1) 5.44ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/store/inventory HTTP/1.1" 200 1644
+INFO:tornado.access:200 GET /allpets (127.0.0.1) 669.04ms
+INFO:tornado.access:200 GET /checkout (127.0.0.1) 5.23ms
+active transacations []
+INFO:project:active transacations []
+[<Transactions 29>]
+INFO:project:[<Transactions 29>]
+order details
+INFO:project:order details
+[<TransactionDetails 29>]
+INFO:project:[<TransactionDetails 29>]
+{'pet_id': 1, 'transactionDetailsId': 29, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+INFO:project:{'pet_id': 1, 'transactionDetailsId': 29, 'username': 'aravindan', 'shipDate': '2017-07-21T17:32:28Z', 'status': 'approved', 'complete': True}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "POST /api/petstore/1.0.0/store/order HTTP/1.1" 200 17
+"do some magic!"
+
+INFO:project:"do some magic!"
+
+number of active transactions are range(0, 1)
+INFO:project:number of active transactions are range(0, 1)
+approving the transactions
+INFO:project:approving the transactions
+INFO:tornado.access:200 POST /shippinginfo (127.0.0.1) 617.16ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 13.77.214.54:8080
+DEBUG:urllib3.connectionpool:http://13.77.214.54:8080 "GET /api/petstore/1.0.0/user/aravindan HTTP/1.1" 200 166
+{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:project:{
+  "firstName": "aravindan",
+  "get_id": "2",
+  "is_active": true,
+  "is_authenticated": true,
+  "lastName": "anandan",
+  "phone": null,
+  "username": "aravindan"
+}
+
+INFO:tornado.access:200 GET /profile (127.0.0.1) 641.63ms
+INFO:tornado.access:200 GET /pets (127.0.0.1) 7.31ms

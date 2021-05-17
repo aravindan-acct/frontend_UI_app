@@ -4,9 +4,12 @@ from flask_login import LoginManager
 from tornado.wsgi import WSGIContainer
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
+import logging
 
 db = SQLAlchemy()
+#log = logging.basicConfig(level='DEBUG', filename='accesslogs.log')
 
+logging.basicConfig(filename='accesslogs.log', level='DEBUG')
 def create_app():
     app = Flask(__name__)
     
@@ -54,5 +57,6 @@ def main():
     IOLoop.instance().start()
 
 if __name__ == "__main__":
+    logging.info("welcome to petstore")
     main()
     

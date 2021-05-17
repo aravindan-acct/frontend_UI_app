@@ -18,8 +18,7 @@
         </tbody>
         </table>
   </div>
-  <script>
-    var user = '{{ profile|tojson }}';
+  <script>    var user = '{{ profile|tojson }}';
     var payload = $.parseJSON(user);
     console.log(payload);
     
@@ -32,6 +31,5 @@
         </tr>';
       
       $("#profiletable").append(user_row);
-    
-  </script>
+      </script>
 {% endblock%}
