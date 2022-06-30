@@ -2148,3 +2148,1050 @@ INFO:project:{
 
 INFO:tornado.access:200 GET /profile (127.0.0.1) 641.63ms
 INFO:tornado.access:200 GET /pets (127.0.0.1) 7.31ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+WARNING:tornado.access:404 GET /owa/auth/x.js (40.74.217.61) 1.76ms
+WARNING:tornado.access:404 GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application (40.74.217.61) 0.94ms
+INFO:tornado.access:200 GET / (40.74.217.61) 24.19ms
+INFO:tornado.access:200 GET / (40.74.217.61) 1.27ms
+INFO:tornado.access:200 GET / (40.74.217.61) 1.50ms
+WARNING:tornado.access:404 GET /favicon.ico (40.74.217.61) 1.03ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 9.19ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 6.14ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 4.28ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 6.66ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.68ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.21ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.85ms
+INFO:tornado.access:302 GET /callback_backend?access_token=87f92e4b-bbb1-4b4f-aa2e-d39aa5c83beb&token_type=bearer&state=7f2f36d2-b9b9-464b-b5eb-e547627bdb4b&expires_in=20 (40.74.217.61) 46.89ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 3
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 168, in pets_menu
+    print(type(resp))
+OSError: [Errno 5] Input/output error
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 125.39ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 3
+ERROR:__main__:Exception on /admin/uploadsampledata [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 187, in uploadsampledata
+    print(os.getcwd())
+OSError: [Errno 5] Input/output error
+ERROR:tornado.access:500 GET /admin/uploadsampledata (40.74.217.61) 17.07ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 3
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 168, in pets_menu
+    print(type(resp))
+OSError: [Errno 5] Input/output error
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 29.42ms
+INFO:tornado.access:200 GET /admin/addpet (40.74.217.61) 4.75ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 3
+ERROR:__main__:Exception on /admin/uploadsampledata [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 187, in uploadsampledata
+    print(os.getcwd())
+OSError: [Errno 5] Input/output error
+ERROR:tornado.access:500 GET /admin/uploadsampledata (40.74.217.61) 14.64ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 3
+ERROR:__main__:Exception on /admin/uploadsampledata [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 187, in uploadsampledata
+    print(os.getcwd())
+OSError: [Errno 5] Input/output error
+ERROR:tornado.access:500 GET /admin/uploadsampledata (40.74.217.61) 13.78ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 10185.34ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 8005.27ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 810.26ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 1550.51ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 5549.92ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 708.07ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 545.40ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 243.35ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 39.73ms
+INFO:tornado.access:302 GET /callback_backend?access_token=cbb9e74b-070b-4c80-afd3-da0ab0ef6a40&token_type=bearer&state=f6ff7e7e-5363-4be0-aea9-418a1bcb06ba&expires_in=20 (40.74.217.61) 3947.49ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1759.84ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/uploadsampledata [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 179, in uploadsampledata
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/uploadsampledata (40.74.217.61) 71665.77ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 163, in pets_menu
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 77297.90ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 163, in pets_menu
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 224788.29ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:tornado.access:200 GET /admin (40.74.217.61) 14.74ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.99ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.77ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 5.17ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.65ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.48ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.62ms
+INFO:tornado.access:302 GET /callback_backend?access_token=dc70b51e-a76b-4ded-842b-3da0ed6ece6b&token_type=bearer&state=8b2eb36c-2092-49de-9e17-e0b4a52620bd&expires_in=20 (40.74.217.61) 31.47ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 3
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 44.83ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 3
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 238
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 240
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 256
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 241
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 252
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 249
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 253
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 262
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 242.98ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 48.82ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.07ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 39.45ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.24ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 1.31ms
+INFO:tornado.access:302 GET /callback_backend?access_token=e2649a6a-1396-45be-956c-88144590b31b&token_type=bearer&state=8b2eb36c-2092-49de-9e17-e0b4a52620bd&expires_in=20 (40.74.217.61) 14.43ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 3
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 33.33ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 3
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 238
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 240
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 256
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 241
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 252
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 249
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 253
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "POST /api/petstore/1.0.0/pet HTTP/1.1" 200 262
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 220.68ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 64.79ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.00ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 1830
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 28.44ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 37.59ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.06ms
+INFO:tornado.access:200 GET / (40.74.217.61) 10.96ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    )
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 163, in pets_menu
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 60041.62ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 503 None
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 166, in pets_menu
+    resp = json.loads(available_status_response.text)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 9.00ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 56.12ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.14ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.48ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 39.85ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.58ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.52ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.21ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.51ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 0.77ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 38.64ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 72.20ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 40.87ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 2.23ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.95ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.75ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.10ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.24ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 163, in pets_menu
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 60023.78ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 10.39ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 0.99ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 1.17ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 2.16ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.22ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.31ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 5.58ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.56ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.08ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.41ms
+INFO:tornado.access:302 GET /callback_backend?access_token=a967867a-b91d-4ab7-8a0e-94c0057db616&token_type=bearer&state=ea0eee65-66c3-44e7-aec2-44299aff9f56&expires_in=19 (40.74.217.61) 21.13ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.11ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 42.96ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/uploadsampledata [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 179, in uploadsampledata
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/uploadsampledata (40.74.217.61) 60008.48ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 44.56ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.38ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.77ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.79ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.12ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 0.67ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 163, in pets_menu
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 60020.80ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+ERROR:__main__:Exception on /admin/all_pets [GET]
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/labuser/.local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/labuser/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/labuser/frontend_UI_app/project/admin.py", line 163, in pets_menu
+    available_status_response = requests.get(available_status_url, headers=headers)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+ERROR:tornado.access:500 GET /admin/all_pets (40.74.217.61) 60007.09ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 10.91ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 4.49ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 0.85ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 0.83ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 44.75ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 0.88ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 0.74ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 0.71ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.94ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 0.97ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.44ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 1.36ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.58ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 0.90ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.30ms
+INFO:tornado.access:302 GET /callback_backend?access_token=bb8610c3-34c7-453f-b710-f03469ba322c&token_type=bearer&state=d3f03362-02e7-42d2-ac7b-44e4c243bfbe&expires_in=20 (40.74.217.61) 30.27ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.24ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 44.67ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 1830
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 30.05ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 39.96ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.52ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.14ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.12ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.21ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.47ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:tornado.access:200 GET /admin (40.74.217.61) 11.17ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 2.44ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.66ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.40ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 1.28ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.52ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.02ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.29ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 6.29ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.79ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.02ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.60ms
+INFO:tornado.access:302 GET /callback_backend?access_token=d62e1960-b87c-4d20-833c-83f7964e1bc9&token_type=bearer&state=b491bf9d-34e1-4cc0-90fa-4e4d491fb45d&expires_in=20 (40.74.217.61) 23.92ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.10ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 44.92ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 1830
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 26.26ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 38.00ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.85ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.10ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.15ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.16ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.22ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 43.80ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.58ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.56ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.78ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 1.13ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.19ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.39ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 35.40ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.84ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.07ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.16ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 0.94ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.27ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.69ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.36ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 11.98ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 2.25ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.22ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.05ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 5.54ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.88ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.09ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.49ms
+INFO:tornado.access:302 GET /callback_backend?access_token=f3dd55d4-18db-454b-9ee5-3a9c784c6471&token_type=bearer&state=5c0c3851-ce5a-426a-89e5-e61127398035&expires_in=20 (40.74.217.61) 28.48ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.25ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 44.21ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 1830
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 26.41ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 40.51ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.89ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 0.82ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 0.98ms
+WARNING:tornado.access:404 GET /admin/undefined (40.74.217.61) 0.90ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.16ms
+INFO:root:welcome to petstore
+DEBUG:asyncio:Using selector: EpollSelector
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.82ms
+INFO:tornado.access:200 GET /admin (40.74.217.61) 9.45ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.92ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.58ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.09ms
+INFO:tornado.access:200 GET /home (40.74.217.61) 5.68ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.81ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.27ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.63ms
+INFO:tornado.access:302 GET /callback_backend?access_token=4cb1d0cc-2d87-45c3-8a9a-253f95152a40&token_type=bearer&state=5075e0ff-fbf4-4c42-8ecb-e0017d61e283&expires_in=20 (40.74.217.61) 20.47ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.48ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 45.85ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status=pending HTTP/1.1" 200 1830
+INFO:tornado.access:302 GET /admin/uploadsampledata (40.74.217.61) 27.82ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 43.89ms
+INFO:tornado.access:200 GET /static/script.js (40.74.217.61) 1.76ms
+INFO:tornado.access:200 GET /static/node_modules/jso/dist/jso.js (40.74.217.61) 1.12ms
+INFO:tornado.access:200 GET /static/node_modules/hellojs/dist/hello.js (40.74.217.61) 1.22ms
+WARNING:tornado.access:404 GET /static/node_modules/jso/dist/jso.js.map (40.74.217.61) 1.30ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/1 HTTP/1.1" 200 261
+INFO:tornado.access:200 GET /admin/petsedit?petid=pet_key1 (40.74.217.61) 18.42ms
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.0.5:8080
+DEBUG:urllib3.connectionpool:http://10.0.0.5:8080 "GET /api/petstore/1.0.0/pet/findByStatus?status=available&status1=pending&status2=sold HTTP/1.1" 200 2748
+INFO:tornado.access:200 GET /admin/all_pets (40.74.217.61) 43.18ms

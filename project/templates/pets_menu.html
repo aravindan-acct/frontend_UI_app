@@ -37,20 +37,24 @@
         
         var value = payload[0];
         console.log(typeof(value));
+        console.log(value);
         var pet_id_array=[];
         for(i=0; i<Object.keys(value).length;i++){
             
             each_pet = Object.keys(value)[i];
+
+            console.log("printing the details of the pet")
             console.log(each_pet);
             each_pet_attr_list = value[each_pet];
             each_pet_attr = each_pet_attr_list[0];
-            console.log(each_pet_attr.length);
-            pet_name = each_pet_attr[0];
-            pet_tag1 = each_pet_attr[1];
-            pet_tag2 = each_pet_attr[2];
-            pet_photo1 = each_pet_attr[3];
-            pet_photo2 = each_pet_attr[4];
-            pet_status = each_pet_attr[5];
+            console.log(each_pet_attr);
+            
+            pet_name = each_pet_attr["name"];
+            pet_tag1 = each_pet_attr["tag1"];
+            pet_tag2 = each_pet_attr["tag2"];
+            pet_photo1 = each_pet_attr["photo1"];
+            pet_photo2 = each_pet_attr["photo2"];
+            pet_status = each_pet_attr["status"];
             var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'</td></tr>';
             $("#petstable th.Name").append(petname_row);
             var tag1_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_tag1+'</td></tr>';
