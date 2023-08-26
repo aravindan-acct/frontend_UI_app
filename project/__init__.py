@@ -6,22 +6,21 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler('accesslogs.log')
 logger.addHandler(file_handler)
 
 db = SQLAlchemy()
 
 
-# Picking the IP of the WAF service protecting the API
-if os.path.exists('/tmp/withwaf.txt'):
-    backend_app_svc = os.environ['WAFIP']
-    callback_ip = os.environ['WAFPublicIP']
-else:
-    backend_app_svc = os.environ['apiserver']
-    callback_ip = os.environ['publicip']
+# Picking the details of the environment
 
-backend_url = "http://"+backend_app_svc+":8080/api/petstore/1.0.0"
+backend_app_svc = os.environ['apiserver']
+backend_app_port = os.environ['apiport']
+backend_app_proto = os.environ['apiproto']
+callback_ip = os.environ['publicip']
+
+backend_url = backend_app_proto+"://"+backend_app_svc+":"+backend_app_port+"/api/petstore/1.0.0"
 headers = {"Content-Type":"application/json"}
 
 
