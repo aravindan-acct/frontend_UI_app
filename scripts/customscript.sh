@@ -21,7 +21,9 @@ wget -q --show-progress --https-only --timestamping \
 chmod +x cfssl cfssljson
 sudo mv cfssl cfssljson /usr/local/bin/
 sudo apt-get -y install nginx
-
+wget https://raw.githubusercontent.com/aravindan-acct/frontend_UI_app/waas/scripts/IMDS_Script_Customized.py
+python3 IMDS_Script_Customized.py
+echo "Public IP set for the JS code to work"
 echo "Generating the  certificates for nginx configuration"
 
 
