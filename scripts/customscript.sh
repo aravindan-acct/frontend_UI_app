@@ -21,7 +21,9 @@ wget -q --show-progress --https-only --timestamping \
 chmod +x cfssl cfssljson
 sudo mv cfssl cfssljson /usr/local/bin/
 sudo apt-get -y install nginx
+
 echo "Generating the  certificates for nginx configuration"
+
 
 # Generating the certificates for NGINX configuration
 
