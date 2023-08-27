@@ -1,39 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
-    <section class="hero is-dark is-fullheight is-bold">
-    <div class="container">
-      <h1 class="title">
-        PetStore Web Application Initial Configuration
-      </h1>
-      <div class="field is-grouped">
-      <form action="/target" method='POST'>
-      <h2 class="desc">
-        Enter the IP address or the Domain Name on which you want to host the Petstore Web Application
-        <br>
-        <br>
-      </h2>
-      <p class="subtitle">
-        <input class="input is-normal" type="text" placeholder="IP Address or Domain">
-      </p>
-        <div class="control">
-          <button class="button is-success" inputmode="submit">
-            <a href="/target" method="POST">Submit</a>
-          </button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-light">
-            Cancel
-          </button>
-        </div>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="column is-4 is-offset-4">
+    <h3 class="title">PetStore Web Application Initial Configuration</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+        {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/target">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="FrontendIP" placeholder="Frontend IP or Domain" autofocus="">
+
+                </div>
+
+            </div>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="BackendIP" placeholder="Backend API IP or Domain">
+
+
+                </div>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+
+        </form>
     </div>
-    </form>
-  </section>
-  </body>
-</html>
+</div>
+
+{% endblock%}
