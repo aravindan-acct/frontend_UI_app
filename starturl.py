@@ -19,8 +19,12 @@ def provisioning():
 	if request.method == 'POST':
 		frontendip = request.form.get('FrontendIP')
 		backendip = request.form.get('BackendIP')
+		backendproto = request.form.get('BackendProto')
+		backendport = request.form.get('Backendport')
 		os.environ['apiserver'] = backendip
 		os.environ['publicip'] = frontendip
+		os.environ['apiproto'] = backendproto
+		os.environ['apiport'] = backendport
 		print(os.environ.get('apiserver'))
 	return 'Petstore Web App Configured Successfully'
 
