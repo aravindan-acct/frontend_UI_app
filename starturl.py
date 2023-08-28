@@ -35,9 +35,11 @@ def provisioning():
 		os.environ["PUBLICIP"] = frontendip
 		os.environ["APIPROTO"] = backendproto
 		os.environ["APIPORT"] = backendport
-		print(os.environ.get('APISERVER'))
+		logger.debug(os.environ.get('APISERVER'))
 		try:
+			logger.debug("attempting to start the frontend app")
 			os.chdir("/etc/startup/frontend_UI_app")
+			logger.debug(os.listdir())
 			os.system("nohup python3 -m project &")
 		except:
 			pass
