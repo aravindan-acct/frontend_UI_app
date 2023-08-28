@@ -9,7 +9,7 @@ import logging
 db = SQLAlchemy()
 #log = logging.basicConfig(level='DEBUG', filename='accesslogs.log')
 
-logging.basicConfig(filename='/tmp/accesslogs.log', level='DEBUG')
+logging.basicConfig(filename='/tmp/accesslogs.log', level='DEBUG', filemode='a')
 def create_app():
     app = Flask(__name__)
     

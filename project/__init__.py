@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler('tmp/accesslogs.log')
+file_handler = logging.FileHandler('/tmp/accesslogs.log', mode='a')
 logger.addHandler(file_handler)
 
 db = SQLAlchemy()
