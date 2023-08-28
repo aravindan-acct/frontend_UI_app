@@ -2,9 +2,19 @@
 # An object of Flask class is our WSGI application.
 from flask import Flask, render_template, request, redirect
 import os
+import logging
 # Flask constructor takes the name of
 # current module (__name__) as argument.
 app = Flask(__name__)
+
+logging.basicConfig(filename="/tmp/newfile.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+# Creating an object
+logger = logging.getLogger()
+ 
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
 
 # The route() function of the Flask class is a decorator,
 # which tells the application which URL should call
@@ -21,12 +31,13 @@ def provisioning():
 		backendip = request.form.get('BackendIP')
 		backendproto = request.form.get('BackendProto')
 		backendport = request.form.get('Backendport')
-		os.environ['apiserver'] = backendip
-		os.environ['publicip'] = frontendip
-		os.environ['apiproto'] = backendproto
-		os.environ['apiport'] = backendport
-		print(os.environ.get('apiserver'))
+		os.environ["APISERVER"] = backendip
+		os.environ["PUBLICIP"] = frontendip
+		os.environ["APIPROTO"] = backendproto
+		os.environ["APIPORT"] = backendport
+		print(os.environ.get('APISERVER'))
 		try:
+			os.chdir("/etc/startup/frontend_UI_app")
 			os.system("nohup python3 -m project &")
 		except:
 			pass

@@ -16,10 +16,10 @@ db = SQLAlchemy()
 # Picking the details of the environment
 
 
-backend_app_svc = os.environ['apiserver']
-backend_app_port = os.environ['apiport']
-backend_app_proto = os.environ['apiproto']
-callback_ip = os.environ['publicip']
+backend_app_svc = os.environ['APISERVER']
+backend_app_port = os.environ['APIPORT']
+backend_app_proto = os.environ['APIPROTO']
+callback_ip = os.environ['PUBLICIP']
 
 
 
