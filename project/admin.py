@@ -15,8 +15,10 @@ admin = Blueprint('admin', __name__)
 @admin.route('/admin')
 def administrator():
     callback_ip = os.environ['publicip']
-    callback_proto = os.environ['apiproto']
-    callback_port = os.environ['apiport']
+    callback_proto = "https"
+    callback_port = "443"
+    #callback_proto = os.environ['apiproto']
+    #callback_port = os.environ['apiport']
     return render_template('admin.html', callback_ip = callback_ip, callback_proto = callback_proto, 
                             callback_port = callback_port)
 

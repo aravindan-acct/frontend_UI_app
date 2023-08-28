@@ -26,6 +26,7 @@ def provisioning():
 		os.environ['apiproto'] = backendproto
 		os.environ['apiport'] = backendport
 		print(os.environ.get('apiserver'))
+		os.system("nohup python3 -m project &")
 	return 'Petstore Web App Configured Successfully'
 
 # main driver function
