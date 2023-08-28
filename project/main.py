@@ -27,7 +27,7 @@ def aboutus():
 def profile():
     username = current_user.username
     get_profile_url = backend_url + "/user/" +username
-    profile_resp = requests.get(get_profile_url)
+    profile_resp = requests.get(get_profile_url, verify=False)
     logger.info(profile_resp.text)
     return render_template('profile.html', profile = json.loads(profile_resp.text))
 
@@ -44,7 +44,7 @@ def inventory():
     #headers = {"Authorization": token.tokenstring}
     headers = {"api_key":"",
                "Postman-Token":"6009e770-58ea-4081-8e7a-22ec012d8ed7"}
-    resp = requests.get(get_inventory_url, headers=headers)
+    resp = requests.get(get_inventory_url, headers=headers, verify=False)
     return_data = resp.text
     data = json.loads(return_data)
     #print(data)
@@ -73,7 +73,7 @@ def checkout_for_order():
     #headers = {"Authorization": token.tokenstring}
     headers = {"api_key":"",
                "Postman-Token":"6009e770-58ea-4081-8e7a-22ec012d8ed7"}
-    resp = requests.get(get_inventory_url, headers=headers)
+    resp = requests.get(get_inventory_url, headers=headers, verify=False)
     return_data = resp.text
     data = json.loads(return_data)
     #print(data)
@@ -139,7 +139,7 @@ def shippinginfo():
                 })
                 logger.info(payload)
                 order_place_url = backend_url+"/store/order"
-                order_place_response = requests.post(order_place_url, headers=headers, data=json.dumps(payload))
+                order_place_response = requests.post(order_place_url, headers=headers, data=json.dumps(payload),verify=False)
                 logger.info(order_place_response.text)
         
         #update the transaction to approved
