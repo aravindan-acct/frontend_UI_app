@@ -9,8 +9,6 @@
         <thead class="has-text-centered">
         <tr class="has-text-centered">
             <th class="Name has-text-centered" >Name</th>
-            <th class="tag1 has-text-centered" >Tag-1</th>
-            <th class="tag2 has-text-centered" >Tag-2</th>
             <th class="photo1 has-text-centered" >Photo-1</th>
             <th class="photo2 has-text-centered" >Photo-2</th>
             <th class="status has-text-centered" >Status</th>
@@ -55,15 +53,11 @@
             pet_photo1 = each_pet_attr["photo1"];
             pet_photo2 = each_pet_attr["photo2"];
             pet_status = each_pet_attr["status"];
-            var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'</td></tr>';
+            var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'</td><br><span class="tag is-link">'+pet_tag1+'</span><br><span class="tag is-link">'+pet_tag2+'</span></tr>';
             $("#petstable th.Name").append(petname_row);
-            var tag1_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_tag1+'</td></tr>';
-            $("#petstable th.tag1").append(tag1_row);
-            var tag2_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_tag2+'</td></tr>';
-            $("#petstable th.tag2").append(tag2_row);
-            var photo1_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo1+' width="200" height="200"></td></tr>';
+            var photo1_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo1+'width="200" height="200"></td></tr>';
             $("#petstable th.photo1").append(photo1_row);
-            var photo2_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo2+' width="200" height="200"></td></tr>';
+            var photo2_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo2+'width="200" height="200"></td></tr>';
             $("#petstable th.photo2").append(photo2_row);
             var status = '<tr><td class="has-text-centered" style="height:300px">'+pet_status+'</td></tr>';
             $("#petstable th.status").append(status);
