@@ -14,17 +14,13 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    if os.path.exists('/tmp/withwaf.txt'):
-        callback_ip = os.environ['WAFPublicIP']
-        callback_proto = "https"
-        callback_port = "443"
-    else:
-        callback_ip = os.environ['publicip']
-        callback_proto = "http"
-        callback_port = "7979"
+    callback_ip = os.environ['PUBLICIP']
+    callback_proto = "https"
+    callback_port = "443"
+    #callback_proto = os.environ['apiproto']
+    #callback_port = os.environ['apiport']
     return render_template('admin.html', callback_ip = callback_ip, callback_proto = callback_proto, 
                             callback_port = callback_port)
-
 
 @admin.route('/home')
 def callback():
@@ -85,7 +81,7 @@ def pets_edit():
     petid_list = petid_string.split('y')
     get_pet_url = backend_url+"/pet/"+petid_list[1]
     print(get_pet_url)
-    get_pet_resp = requests.get(get_pet_url, headers=headers)
+    get_pet_resp = requests.get(get_pet_url, headers=headers, verify=False)
     resp = json.loads(get_pet_resp.text)
     print(type(resp))
     return render_template('/editpet.html', data = resp)
@@ -130,7 +126,7 @@ def pets_edit_put():
     print("Photos count is {}".format(len(photoUrls)))
     print(data)
     edit_url = backend_url+"/pet"
-    edit_resp = requests.put(edit_url, headers=headers, data=urlencode(data))
+    edit_resp = requests.put(edit_url, headers=headers, data=urlencode(data), verify=False)
     if edit_resp.status_code == 200:
         print("Successfully edited")
         return redirect('/admin/all_pets')
@@ -148,7 +144,7 @@ def pets_delete():
 
     delete_url = backend_url+"/pet/"+petid_list[1]
     print(delete_url)
-    delete_resp = requests.delete(delete_url, headers=headers)
+    delete_resp = requests.delete(delete_url, headers=headers, verify=False)
     if delete_resp.status_code == 200:
         return redirect('/admin/all_pets')
     else:
@@ -160,7 +156,7 @@ def pets_menu():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
     headers = {"Authorization": token.tokenstring}
     available_status_url = backend_url+"/pet/findByStatus?status=available&status1=pending&status2=sold"
-    available_status_response = requests.get(available_status_url, headers=headers)
+    available_status_response = requests.get(available_status_url, headers=headers, verify=False)
     
     resp = dict()
     resp = json.loads(available_status_response.text)
@@ -176,7 +172,7 @@ def uploadsampledata():
     
     available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
     headers = {"Authorization": token.tokenstring}
-    available_status_response = requests.get(available_status_url, headers=headers)
+    available_status_response = requests.get(available_status_url, headers=headers, verify=False)
     resp = dict()
     resp = json.loads(available_status_response.text)
     
@@ -209,7 +205,7 @@ def uploadsampledata():
                 "photoUrls": photoUrls,
                 "status": val["status"]
             }
-            response = requests.post(pet_url, headers=headers, data=urlencode(payload))
+            response = requests.post(pet_url, headers=headers, data=urlencode(payload), verify=False)
         
         return redirect('/admin/all_pets')
 
@@ -247,7 +243,7 @@ def addpet():
     print(payload)
     
     
-    response = requests.post(url, headers=headers, data=urlencode(payload))
+    response = requests.post(url, headers=headers, data=urlencode(payload), verify=False)
     if response.status_code == 200:
         resp = json.loads(response.text)
         return redirect('/admin/all_pets')

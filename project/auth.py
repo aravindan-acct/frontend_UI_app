@@ -56,7 +56,7 @@ def signup_post():
 
     #user = User.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
     user_get_url = backend_url + "/user/" + username
-    user_get = requests.get(user_get_url)
+    user_get = requests.get(user_get_url, verify=False)
     if user_get.status_code == 200:
     #if user: # if a user is found, we want to redirect back to signup page so user can try again
         flash('Email address already exists')
@@ -80,7 +80,7 @@ def signup_post():
         "phone": phone
     }
     new_user_url = backend_url + "/user"
-    new_user = requests.post(new_user_url, headers=headers, data=json.dumps(payload))
+    new_user = requests.post(new_user_url, headers=headers, data=json.dumps(payload), verify=False)
     if new_user.status_code == 200:
         #return redirect(url_for('auth.login'))
         return redirect(url_for('auth.login'))
@@ -99,7 +99,7 @@ def login_post():
     user_login_url = backend_url + "/user/login?username=" + username + "&password=" + password
     # check if the user actually exists
     # take the user-supplied password, hash it, and compare it to the hashed password in the database
-    user_get = requests.get(user_login_url)
+    user_get = requests.get(user_login_url, verify=False)
     
     if user_get.status_code != 200:
     #if not user or not check_password_hash(user.password, password):
@@ -109,7 +109,7 @@ def login_post():
     # if the above check passes, then we know the user has the right credentials
     else:
         user_get_info = backend_url + "/user/" + username
-        user_info_resp = requests.get(user_get_info)
+        user_info_resp = requests.get(user_get_info, verify=False)
         user_info_text = user_info_resp.text
         user_info = json.loads(user_info_text)
         print(type(user_info))
