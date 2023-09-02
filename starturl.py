@@ -3,6 +3,8 @@
 from flask import Flask, render_template, request, redirect
 import os
 import logging
+from input_validator import Validator
+
 # Flask constructor takes the name of
 # current module (__name__) as argument.
 app = Flask(__name__)
@@ -20,7 +22,7 @@ logger.setLevel(logging.DEBUG)
 # which tells the application which URL should call
 # the associated function.
 @app.route('/settings/starturl')
-# ‘/starturl’ URL is bound with provisioning() function.
+# ‘/settings/starturl’ URL is bound with provisioning() function.
 def view_form():
     return render_template('starturl.html')
 
@@ -28,9 +30,25 @@ def view_form():
 def provisioning():
 	if request.method == 'POST':
 		frontendip = request.form.get('FrontendIP')
+		if Validator.check_ip(str(frontendip)):
+			pass
+		else:
+			return ('Invalid input for Frontend',404)
 		backendip = request.form.get('BackendIP')
+		if Validator.check_ip(str(backendip)):
+			pass
+		else:
+			return ('Invalid input for the Backend', 404)
 		backendproto = request.form.get('BackendProto')
+		if backendproto == "http" or backendproto == "https":
+			pass
+		else:
+			return ('Invalid input for the Backend Protocol', 404)
 		backendport = request.form.get('Backendport')
+		if int(backendport) != 8080 or int(backendport) != 443:
+			return ('Returning error. Please use 443 if proxying or specify the port as 8080', 404)
+		else:
+			pass
 		os.environ["APISERVER"] = backendip
 		os.environ["PUBLICIP"] = frontendip
 		os.environ["APIPROTO"] = backendproto
