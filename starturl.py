@@ -65,7 +65,7 @@ def provisioning():
 			os.system("sudo systemctl start frontend")
 		except:
 			pass
-	return redirect('/admin')
+	return render_template('redirect.html')
 
 @app.route('/settings/reset', methods=['POST'])
 
@@ -76,7 +76,7 @@ def reset():
 			os.unsetenv(env_var)
 		except:
 			pass
-	return redirect('/settings/starturl')
+	return render_template('reset.html')
 
 # main driver function
 if __name__ == '__main__':

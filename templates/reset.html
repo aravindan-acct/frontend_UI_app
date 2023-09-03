@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+    var callback_ip = '{{ frontendip }}'
+    window.location.replace('https://'+ callback_ip + '/settings/starturl');
+</script>
+
+{% endblock%}
