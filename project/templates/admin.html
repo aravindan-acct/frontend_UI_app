@@ -35,8 +35,8 @@ $(document).ready(()=>{
     
         $("#get_token").click(function test(){
         var callbackip = '{{ callback_ip }}';
-        var callback_proto = '{{ callback_proto }}'
-        var callback_port = '{{ callback_port }}'
+        var callback_proto = '{{ callback_proto }}';
+        var callback_port = '{{ callback_port }}';
         let opts = {
             redirect_uri: callback_proto+"://"+callbackip+":"+callback_port+"/home",
             response_type: 'token',

@@ -76,7 +76,7 @@ def reset():
 			os.unsetenv(env_var)
 		except:
 			pass
-	return render_template('reset.html')
+	return ('Configuration Reset', 200)
 
 # main driver function
 if __name__ == '__main__':

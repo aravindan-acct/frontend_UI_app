@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <script>
-    var callback_ip = '{{ frontendip }}'
-    window.location.replace('https://'+ callback_ip + '/admin');
-</script>
+
+    $(document).ready(()=>{
+            var callbackip = '{{ frontendip }}';
+            redirect_uri: "https://"+frontendip+"/admin",
+            windows.location.replace(redirect_uri);
+            });
+    </script>
 
 {% endblock%}
