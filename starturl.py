@@ -65,7 +65,7 @@ def provisioning():
 			os.system("sudo systemctl start frontend")
 		except:
 			pass
-	return render_template('redirect.html')
+	return render_template('redirect.html', frontendip = frontendip)
 
 @app.route('/settings/reset', methods=['POST'])
 
