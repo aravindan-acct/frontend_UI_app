@@ -4,7 +4,8 @@
 
     $(document).ready(()=>{
             var callbackip = '{{ frontendip }}';
-            redirect_uri: "https://"+frontendip+"/admin",
+            console.log(callbackip)
+            redirect_uri: "https://"+callbackip+"/admin",
             windows.location.replace(redirect_uri);
             });
     </script>

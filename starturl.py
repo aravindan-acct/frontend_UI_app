@@ -59,10 +59,12 @@ def provisioning():
 		os.environ["APIPROTO"] = backendproto
 		os.environ["APIPORT"] = backendport
 		logger.debug(os.environ.get('APISERVER'))
+		logger.debug(os.environ.get('PUBLICIP'))
+		logger.debug(os.environ.get('APIPROTO'))
+		logger.debug(os.environ.get('APIPORT'))
 		try:
 			logger.debug("attempting to start the frontend app")
-			os.system("sudo systemctl stop frontend")
-			os.system("sudo systemctl start frontend")
+			os.system("sudo systemctl restart frontend")
 		except:
 			pass
 	return render_template('redirect.html', frontendip = frontendip)
