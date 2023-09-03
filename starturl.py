@@ -32,10 +32,14 @@ def provisioning():
 		frontendip = request.form.get('FrontendIP')
 		if Validator.check_ip(str(frontendip)):
 			pass
+		elif Validator.check_string(str(frontendip)):
+			pass
 		else:
-			return ('Invalid input for Frontend',404)
+			return ('Invalid input for the Frontend',404)
 		backendip = request.form.get('BackendIP')
 		if Validator.check_ip(str(backendip)):
+			pass
+		elif Validator.check_string(str(frontendip)):
 			pass
 		else:
 			return ('Invalid input for the Backend', 404)
@@ -45,10 +49,11 @@ def provisioning():
 		else:
 			return ('Invalid input for the Backend Protocol', 404)
 		backendport = request.form.get('Backendport')
-		if int(backendport) != 8080 or int(backendport) != 443:
-			return ('Returning error. Please use 443 if proxying or specify the port as 8080', 404)
-		else:
+		backendport_num = int(backendport)
+		if backendport_num == 8080 or backendport_num == 443:
 			pass
+		else:
+			return ('Returning error. Please use 443 if proxying or specify the port as 8080', 404)
 		os.environ["APISERVER"] = backendip
 		os.environ["PUBLICIP"] = frontendip
 		os.environ["APIPROTO"] = backendproto

@@ -6,9 +6,9 @@ class Validator():
         pass
     def check_string(input_string):
         try:
-            regex = r'(a-zA-Z0-9.)'
-            re.findall()
-            return True
+            regex = r'^[a-zA-Z0-9.]+$'
+            if bool(re.match(regex, input_string)):
+                return True
         except:
             return False
 
