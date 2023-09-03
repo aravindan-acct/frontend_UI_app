@@ -1,19 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-import os, stat
-import logging
+import os
 
-
-logging.basicConfig(filename="/var/log/accesslogs.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-
-# Creating an object
-logger = logging.getLogger()
- 
-# Setting the threshold of logger to DEBUG
-logger.setLevel(logging.DEBUG)
 
 db = SQLAlchemy()
 
