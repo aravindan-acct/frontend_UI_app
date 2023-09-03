@@ -61,9 +61,8 @@ def provisioning():
 		logger.debug(os.environ.get('APISERVER'))
 		try:
 			logger.debug("attempting to start the frontend app")
-			os.chdir("/etc/startup/frontend_UI_app")
-			logger.debug(os.listdir())
-			os.system("nohup python3 -m project &")
+			os.system("sudo systemctl stop frontend")
+			os.system("sudo systemctl start frontend")
 		except:
 			pass
 	return redirect('/admin')
@@ -71,23 +70,14 @@ def provisioning():
 @app.route('/settings/reset', methods=['POST'])
 
 def reset():
-	try:
-		os.unsetenv('APISERVER')
-	except:
-		pass
-	try:
-		os.unsetenv('PUBLICIP')
-	except:
-		pass
-	try:
-		os.unsetenv('APIPROTO')
-	except:
-		pass
-	try:
-		os.unsetenv('APIPORT')
-	except:
-		pass
+	env_list = ['APISERVER', 'PUBLICIP', 'APIPROTO', 'APIPORT']
+	for env_var in env_list:
+		try:
+			os.unsetenv(env_var)
+		except:
+			pass
 	return redirect('/settings/starturl')
+
 # main driver function
 if __name__ == '__main__':
 
