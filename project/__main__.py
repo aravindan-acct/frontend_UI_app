@@ -8,6 +8,7 @@ import logging
 
 db = SQLAlchemy()
 
+logging.basicConfig(filename='/tmp/accesslogs.log', level='DEBUG', filemode='a')
 
 def create_app():
     app = Flask(__name__)
@@ -63,9 +64,10 @@ def main():
     app = create_app()
     http_server = HTTPServer(WSGIContainer(app))
     http_server.listen(7979)
-    logger.info("welcome to petstore")
+    
     IOLoop.instance().start()
 
 if __name__ == "__main__":
+    logger.info("welcome to petstore")
     main()
     
