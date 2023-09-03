@@ -6,9 +6,14 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler('/tmp/accesslogs.log', mode='a')
-logger.addHandler(file_handler)
+logging.basicConfig(filename="/tmp/newfile.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+# Creating an object
+logger = logging.getLogger()
+ 
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
 
 db = SQLAlchemy()
 
