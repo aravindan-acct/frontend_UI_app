@@ -1,14 +1,19 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-import os
+import os, stat
 import logging
 
 logger = logging.getLogger(__name__)
 
-logging.basicConfig(filename="/tmp/newfile.log",
+logging.basicConfig(filename="/tmp/accesslogs.log",
                     format='%(asctime)s %(message)s',
                     filemode='w')
+os.chmod('/tmp/accesslogs/log', stat.S_IROTH)
+os.chmod('/tmp/accesslogs/log', stat.S_IWOTH)
+os.chmod('/tmp/accesslogs/log', stat.S_IREAD)
+os.chmod('/tmp/accesslogs/log', stat.S_IWRITE)
+
 # Creating an object
 logger = logging.getLogger()
  
