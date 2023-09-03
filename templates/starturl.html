@@ -19,7 +19,6 @@
                 <label class="label">Hosted IP or Domain Name</label>
                 <div class="control">
                     <input class="input is-large" type="text" name="FrontendIP" placeholder="Frontend IP or Domain" autofocus="">
-
                 </div>
                 <p class="help">If the app is hosted through WAAS, enter the CNAME/Domain Name here</p>
             </div>
@@ -51,7 +50,7 @@
                 <p class="help">Enter 8080 if directly connecting (without WAAS)</p>
             </div>
             <button class="button is-block is-info is-default is-fullwidth">Submit</button>
-
+            <button class="button is-block is-info is-default is-fullwidth" formaction="/settings/reset" formmethod="post">Reset Configuration</button>
         </form>
     </div>
 </div>

@@ -66,8 +66,28 @@ def provisioning():
 			os.system("nohup python3 -m project &")
 		except:
 			pass
-	return 'Petstore Web App Configured Successfully'
+	return redirect('/admin')
 
+@app.route('/settings/reset', methods=['POST'])
+
+def reset():
+	try:
+		os.unsetenv('APISERVER')
+	except:
+		pass
+	try:
+		os.unsetenv('PUBLICIP')
+	except:
+		pass
+	try:
+		os.unsetenv('APIPROTO')
+	except:
+		pass
+	try:
+		os.unsetenv('APIPORT')
+	except:
+		pass
+	return redirect('/settings/starturl')
 # main driver function
 if __name__ == '__main__':
 
