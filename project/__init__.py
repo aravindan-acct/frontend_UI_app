@@ -3,6 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 import os
 import json
+import logging
+
+logger = logging.getLogger(__name__)
+
+logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler('/tmp/accesslogs.log', mode='a')
+logger.addHandler(file_handler)
+
 
 db = SQLAlchemy()
 

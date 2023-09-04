@@ -4,7 +4,7 @@ from flask_login import LoginManager
 from tornado.wsgi import WSGIContainer
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
-
+from . import logger
 db = SQLAlchemy()
 
 
