@@ -8,7 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler('/tmp/accesslogs.log', mode='a')
+file_handler = logging.FileHandler('/tmp/accesslogs.log', mode='w')
 logger.addHandler(file_handler)
 
 
