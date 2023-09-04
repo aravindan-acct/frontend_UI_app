@@ -181,13 +181,16 @@ def uploadsampledata():
     available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
     logger.info(available_status_url)
     headers = {"Authorization": token.tokenstring}
+    logger.info(headers)
+
     available_status_response = requests.get(available_status_url, headers=headers, verify=False)
+
     resp = dict()
     resp = json.loads(available_status_response.text)
     logger.info(resp)
 
     if len(resp) >= 1:
-        print("data exists")
+        logger.info("data exists")
         return redirect('/admin/all_pets')
     else:
         logger.info(os.getcwd())
