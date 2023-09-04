@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect
 import os
 import logging
 from input_validator import Validator
+import json
 
 # Flask constructor takes the name of
 # current module (__name__) as argument.
@@ -69,7 +70,9 @@ def provisioning():
 			"apiport" : backendport
 		}
 		with open('/tmp/startup_params.json', 'w') as file:
-			file.write(params_dict)
+			file.write(json.dumps(params_dict))
+			file.close()
+			
 		try:
 			logger.debug("Attempting to start the frontend app...")
 			logger.info(os.system("sudo systemctl restart frontend"))
