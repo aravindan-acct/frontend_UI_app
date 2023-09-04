@@ -62,6 +62,14 @@ def provisioning():
 		logger.debug(os.environ.get('PUBLICIP'))
 		logger.debug(os.environ.get('APIPROTO'))
 		logger.debug(os.environ.get('APIPORT'))
+		params_dict = {
+			"apiserver": backendip,
+			"publicip" : frontendip,
+			"apiproto" : backendproto,
+			"apiport" : backendport
+		}
+		with open('/tmp/startup_params.json', 'w') as file:
+			file.write(params_dict)
 		try:
 			logger.debug("Attempting to start the frontend app...")
 			logger.info(os.system("sudo systemctl restart frontend"))
