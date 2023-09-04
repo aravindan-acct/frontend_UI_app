@@ -14,7 +14,16 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    callback_ip = os.environ['PUBLICIP']
+    with open('/tmp/startup_params.json', 'r') as file:
+        contents = file.read()
+        contents_dict = json.loads(contents)
+        file.close()
+        
+    try:
+        callback_ip = os.environ['PUBLICIP']
+    except:
+        callback_ip = contents_dict["publicip"]
+    
     callback_proto = "https"
     callback_port = "443"
     #callback_proto = os.environ['apiproto']
