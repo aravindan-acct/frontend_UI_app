@@ -55,6 +55,8 @@
             pet_status = each_pet_attr["status"];
             var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'</td><br><span class="tag is-link">'+pet_tag1+'</span><br><span class="tag is-link">'+pet_tag2+'</span></tr>';
             $("#petstable th.Name").append(petname_row);
+            $("petstable th.tag1").append(pet_tag1)
+            $("petstable th.tag2").append(pet_tag2)
             var photo1_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo1+'width="200" height="200"></td></tr>';
             $("#petstable th.photo1").append(photo1_row);
             var photo2_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo2+'width="200" height="200"></td></tr>';
