@@ -9,8 +9,6 @@
         <thead class="has-text-centered">
         <tr class="has-text-centered">
             <th class="Name has-text-centered" >Name</th>
-            <th class="edit has-text-centered" >Edit</th>
-            <th class="delete_button has-text-centered" >Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -62,10 +60,10 @@
             $("#petstable th.Name").append(status);
             edit_url = "{{ url_for('admin.pets_edit', petid=each_pet) }}"
             var edit_option = '<tr><td class="has-text-centered" style="height:300px"><a class="button is-normal"'+"href={{ url_for('admin.pets_edit') }}"+'?petid='+each_pet+'>Edit</a></td></tr>';
-            $("#petstable th.edit").append(edit_option);
+            $("#petstable th.Name").append(edit_option);
             delete_url = "{{ url_for('admin.pets_delete', petid=each_pet) }}"
             var delete_option = '<tr><td class="has-text-centered" style="height:300px"><a class="button is-warning"'+"href={{ url_for('admin.pets_delete') }}"+'?petid='+each_pet+'>Delete</a></td></tr>';
-            $("#petstable th.delete_button").append(delete_option);
+            $("#petstable th.Name").append(delete_option);
         }
     </script>
 {% endblock %}
