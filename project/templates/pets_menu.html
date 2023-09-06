@@ -48,8 +48,8 @@
             pet_photo1 = each_pet_attr["photo1"];
             pet_photo2 = each_pet_attr["photo2"];
             pet_status = each_pet_attr["status"];
-            edit_url = '{{ url_for(admin.pets_edit)  }}'
-            delete_url = '{{ url_for(admin.pets_delete)  }}'
+            edit_url = "{{ url_for('admin.pets_edit') }}"
+            delete_url = "{{ url_for('admin.pets_delete') }}"
             var petname_row = '<tr><td class="has-text-centered" style="width:1200px" style="height:300px" style="margin:50px 30px>'+pet_name+'<br><img src='+pet_photo1+' width="200" height="200" style="horizontal-align:middle;margin:50px 30px">'+'<img src='+pet_photo2+' width="200" height="200" style="horizontal-align:middle;margin:50px 30px">'+'<br><strong>Status:    </strong>'+pet_status+'<br><strong>Tags:    </strong><span class="tag is-link">'+pet_tag1+'</span><br><span class="tag is-link" style="margin:50px 30px>'+pet_tag2+'</span>'+'<br><span><a class="button is-normal" '+'"href='+edit_url+'"?petid='+each_pet+'>Edit</a></span>'+'<br><span><a class="button is-warning" '+'"href='+delete_url+'"?petid='+each_pet+'>Delete</a></span></td></tr>';
             $("#petstable th.Name").append(petname_row);
         }
