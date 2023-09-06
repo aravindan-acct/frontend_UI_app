@@ -55,14 +55,14 @@
             pet_status = each_pet_attr["status"];
             var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'</td><br><span class="tag is-link">'+pet_tag1+'</span><br><span class="tag is-link">'+pet_tag2+'</span></tr>';
             $("#petstable th.Name").append(petname_row);
-            $("petstable th.tag1").append(pet_tag1)
-            $("petstable th.tag2").append(pet_tag2)
+            $("petstable th.Name").append(pet_tag1)
+            $("petstable th.Name").append(pet_tag2)
             var photo1_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo1+'width="200" height="200"></td></tr>';
-            $("#petstable th.photo1").append(photo1_row);
+            $("#petstable th.Name").append(photo1_row);
             var photo2_row = '<tr><td class="has-text-centered" style="height:300px"><img src='+pet_photo2+'width="200" height="200"></td></tr>';
-            $("#petstable th.photo2").append(photo2_row);
+            $("#petstable th.Name").append(photo2_row);
             var status = '<tr><td class="has-text-centered" style="height:300px">'+pet_status+'</td></tr>';
-            $("#petstable th.status").append(status);
+            $("#petstable th.Name").append(status);
             edit_url = "{{ url_for('admin.pets_edit', petid=each_pet) }}"
             var edit_option = '<tr><td class="has-text-centered" style="height:300px"><a class="button is-normal"'+"href={{ url_for('admin.pets_edit') }}"+'?petid='+each_pet+'>Edit</a></td></tr>';
             $("#petstable th.edit").append(edit_option);

@@ -193,6 +193,7 @@ def uploadsampledata():
         logger.info("data exists")
         return redirect('/admin/all_pets')
     else:
+        logger.info("Current working is ")
         logger.info(os.getcwd())
         directory = os.getcwd()
         with open(f"{directory}"+"/project/pets_data.json") as sample_file:
