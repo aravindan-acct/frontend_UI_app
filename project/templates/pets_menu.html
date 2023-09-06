@@ -48,22 +48,8 @@
             pet_photo1 = each_pet_attr["photo1"];
             pet_photo2 = each_pet_attr["photo2"];
             pet_status = each_pet_attr["status"];
-            var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'<br><span class="tag is-link">'+pet_tag1+'</span><br><span class="tag is-link">'+pet_tag2+'</span></td></tr>';
+            var petname_row = '<tr><td class="has-text-centered" style="height:300px">'+pet_name+'<br><span class="tag is-link">'+pet_tag1+'</span><br><span class="tag is-link">'+pet_tag2+'</span></td>'+'<td class="has-text-centered" style="height:300px"><img src='+pet_photo1+'width="200" height="200"></td>'+'<td class="has-text-centered" style="height:300px"><img src='+pet_photo2+'width="200" height="200"></td>'+'<td class="has-text-centered" style="height:300px">'+pet_status+'</td>'+'<td class="has-text-centered" style="height:300px"><a class="button is-normal"'+"href={{ url_for('admin.pets_edit') }}"+'?petid='+each_pet+'>Edit</a></td>'+'<td class="has-text-centered" style="height:300px"><a class="button is-warning"'+"href={{ url_for('admin.pets_delete') }}"+'?petid='+each_pet+'>Delete</a></td></tr>';
             $("#petstable th.Name").append(petname_row);
-            $("petstable th.Name").append(pet_tag1)
-            $("petstable th.Name").append(pet_tag2)
-            var photo1_row = '<td class="has-text-centered" style="height:300px"><img src='+pet_photo1+'width="200" height="200"></td>';
-            $("#petstable th.Name").append(photo1_row);
-            var photo2_row = '<td class="has-text-centered" style="height:300px"><img src='+pet_photo2+'width="200" height="200"></td>';
-            $("#petstable th.Name").append(photo2_row);
-            var status = '<td class="has-text-centered" style="height:300px">'+pet_status+'</td>';
-            $("#petstable th.Name").append(status);
-            edit_url = "{{ url_for('admin.pets_edit', petid=each_pet) }}"
-            var edit_option = '<td class="has-text-centered" style="height:300px"><a class="button is-normal"'+"href={{ url_for('admin.pets_edit') }}"+'?petid='+each_pet+'>Edit</a></td>';
-            $("#petstable th.Name").append(edit_option);
-            delete_url = "{{ url_for('admin.pets_delete', petid=each_pet) }}"
-            var delete_option = '<td class="has-text-centered" style="height:300px"><a class="button is-warning"'+"href={{ url_for('admin.pets_delete') }}"+'?petid='+each_pet+'>Delete</a></td>';
-            $("#petstable th.Name").append(delete_option);
         }
     </script>
 {% endblock %}
