@@ -129,5 +129,5 @@ def login_post():
         user = User.query.filter_by(username = user_info["username"]).first()
         login_user(user, remember=remember)
 
-    return redirect(url_for('main.pets'))
+    return redirect(url_for('main.allpets'))
 
