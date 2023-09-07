@@ -33,7 +33,7 @@ def profile():
 @main.route('/pets')
 @login_required
 def pets():
-    return render_template('pets.html')
+    return render_template('pets_menu.html')
 
 @main.route('/allpets')
 @login_required
