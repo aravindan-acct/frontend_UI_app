@@ -5,6 +5,7 @@ from . import db, backend_url, headers
 from flask_login import login_user, logout_user, login_required, current_user
 import requests
 import json
+from . import logger
 
 auth = Blueprint('auth', __name__)
 
@@ -100,7 +101,8 @@ def login_post():
     # check if the user actually exists
     # take the user-supplied password, hash it, and compare it to the hashed password in the database
     user_get = requests.get(user_login_url, verify=False)
-    
+    logger.info(user_login_url)
+    logger.info(user_get.status_code)
     if user_get.status_code != 200:
     #if not user or not check_password_hash(user.password, password):
         flash('Please check your login details and try again.')
@@ -112,7 +114,7 @@ def login_post():
         user_info_resp = requests.get(user_get_info, verify=False)
         user_info_text = user_info_resp.text
         user_info = json.loads(user_info_text)
-        print(type(user_info))
+        logger.info(type(user_info))
         class user:
             is_active=user_info["is_active"]
             is_authenticated=user_info["is_authenticated"]

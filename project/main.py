@@ -4,7 +4,7 @@ from flask_login import login_required, current_user
 import requests
 import json
 from .models import Token, CartItems, Carts, Transactions, TransactionDetails
-
+from . import logger
 
 
 main = Blueprint('main', __name__)
@@ -46,7 +46,8 @@ def inventory():
     resp = requests.get(get_inventory_url, headers=headers, verify=False)
     return_data = resp.text
     data = json.loads(return_data)
-    #print(data)
+    logger.info(data)
+
     return render_template('store/inventory.html', data = data)
 
 @main.route('/admin/pets')
