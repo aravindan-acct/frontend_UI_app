@@ -7,6 +7,7 @@ import json
 from .models import Token
 from . import db, backend_url
 import os
+from . import logger
 
 admin = Blueprint('admin', __name__)
 
@@ -14,11 +15,18 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin')
 def administrator():
-    callback_ip = os.environ['PUBLICIP']
+    with open('/tmp/startup_params.json', 'r') as file:
+        contents = file.read()
+        contents_dict = json.loads(contents)
+        file.close()
+
+    try:
+        callback_ip = os.environ['PUBLICIP']
+    except:
+        callback_ip = contents_dict["publicip"]
+    
     callback_proto = "https"
     callback_port = "443"
-    #callback_proto = os.environ['apiproto']
-    #callback_port = os.environ['apiport']
     return render_template('admin.html', callback_ip = callback_ip, callback_proto = callback_proto, 
                             callback_port = callback_port)
 
@@ -171,20 +179,26 @@ def uploadsampledata():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
     
     available_status_url = backend_url+"/pet/findByStatus?status=available&status=pending"
+    logger.info(available_status_url)
     headers = {"Authorization": token.tokenstring}
+    logger.info(headers)
+
     available_status_response = requests.get(available_status_url, headers=headers, verify=False)
+
     resp = dict()
     resp = json.loads(available_status_response.text)
-    
+    logger.info(resp)
+
     if len(resp) >= 1:
-        print("data exists")
+        logger.info("data exists")
         return redirect('/admin/all_pets')
     else:
-        print(os.getcwd())
+        logger.info("Current working directory is ")
+        logger.info(os.getcwd())
         directory = os.getcwd()
         with open(f"{directory}"+"/project/pets_data.json") as sample_file:
             file_content=sample_file.read()
-            print(file_content)
+            logger.info(file_content)
             data=json.loads(file_content)
         for keys,val in data.items():
             

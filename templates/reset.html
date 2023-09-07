@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+
+    $(document).ready(()=>{
+            var callbackip = '{{ frontendip }}';
+            redirect_uri: "https://"+frontendip+"/settings/starturl",
+            windows.location.replace(redirect_uri);
+            });
+</script>
+
+{% endblock%}

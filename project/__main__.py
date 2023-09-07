@@ -4,12 +4,10 @@ from flask_login import LoginManager
 from tornado.wsgi import WSGIContainer
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
-import logging
-
+from . import logger
 db = SQLAlchemy()
-#log = logging.basicConfig(level='DEBUG', filename='accesslogs.log')
 
-logging.basicConfig(filename='/tmp/accesslogs.log', level='DEBUG', filemode='a')
+
 def create_app():
     app = Flask(__name__)
     
@@ -33,9 +31,7 @@ def create_app():
     @login_manager.user_loader
     def load_user(user_id):
         # since the user_id is just the primary key of our user table, use it in the query for the user
-        return User.query.get(int(user_id))
-    
-    
+        return User.query.get(int(user_id))   
 
     #blueprint for auth routes in the app
     from .auth import auth as auth_blueprint
@@ -53,10 +49,10 @@ def create_app():
 def main():
     app = create_app()
     http_server = HTTPServer(WSGIContainer(app))
-    http_server.listen(7979)
+    http_server.listen(7979)   
     IOLoop.instance().start()
 
 if __name__ == "__main__":
-    logging.info("welcome to petstore")
+    logger.info("Welcome to Petstore")
     main()
     

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for, session, jsonify, request,flash
-from . import db, backend_url, logger
+from . import db, backend_url
 from flask_login import login_required, current_user
 import requests
 import json
@@ -28,7 +28,6 @@ def profile():
     username = current_user.username
     get_profile_url = backend_url + "/user/" +username
     profile_resp = requests.get(get_profile_url, verify=False)
-    logger.info(profile_resp.text)
     return render_template('profile.html', profile = json.loads(profile_resp.text))
 
 @main.route('/pets')
@@ -105,7 +104,6 @@ def shippinginfo():
 
     #check if transaction is active
     active_transactions = Transactions.query.filter_by(status = "active").all()
-    logger.info("active transacations {}".format(active_transactions))
     if len(active_transactions) != 0:
         #Nothing added in cart
         return render_template('checkout.html')
@@ -118,15 +116,10 @@ def shippinginfo():
         #order_details = 
 
         order = Transactions.query.filter_by(status = "active").all()
-        logger.info(order)
-
         order_num = order[0].id
-        
         order_details = TransactionDetails.query.filter_by(transaction_id = order_num).all()
         #print(order_details)
         for i in range(len(order_details)):
-            logger.info("order details")
-            logger.info(order_details)
             payload = {}
             for k,v in cartitems_dict.items():
                 payload.update({
@@ -137,16 +130,16 @@ def shippinginfo():
                 "status" : "approved",
                 "complete": True
                 })
-                logger.info(payload)
+                
                 order_place_url = backend_url+"/store/order"
                 order_place_response = requests.post(order_place_url, headers=headers, data=json.dumps(payload),verify=False)
-                logger.info(order_place_response.text)
+                
         
         #update the transaction to approved
         active_transactions = Transactions.query.filter_by(status = "active").all()
-        logger.info("number of active transactions are {}".format(range(len(active_transactions))))
+        
         for i in range(len(active_transactions)):
-            logger.info("approving the transactions")
+        
             active_transactions[i].status = "approved"
             db.session.commit()
         return render_template('orderdetails.html', payload = json.dumps(payload))
@@ -161,14 +154,14 @@ def addtocart():
     cart_items = CartItems.query.all()
     
     data=[]
-    logger.info(len(cart_items))
+    
     for i in range(len(cart_items)):
         #print(cart_items[i])
         data.append(cart_items[i].pet_id )
         #print(data)
     
     if int(pet_id) in data:
-        logger.info("item already added")
+        pass
     else:
         #print(type(pet_id))
         #print("not in list")
@@ -187,8 +180,7 @@ def removefromcart():
     cart_id = cart.id
     cart_items = CartItems.query.filter_by(pet_id = int(pet_id)).first()
 
-    logger.info("printing the item to be deleted")
-    logger.info(cart_items)
+    
     if cart_items == None:
         return redirect('/allpets')
     else:
@@ -201,9 +193,8 @@ def removefromcart():
 def viewcart():
     cart_items = CartItems.query.all()
     data=[]
-    logger.info(len(cart_items))
+    
     for i in range(len(cart_items)):
-        logger.info(cart_items[i])
         data.append(cart_items[i].pet_id )
         #print(data)
     data_to_display = {}
@@ -212,7 +203,7 @@ def viewcart():
         "total_items": num_of_items,
         "Items": data
     })
-    logger.info(data_to_display)
+    
     return render_template('viewcart.html', data = data_to_display)
 
 

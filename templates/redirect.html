@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+    var callbackip = '{{ frontend_callback_ip }}';
+    console.log(callbackip)
+    redirect_uri= "https://"+callbackip+"/admin";
+    window.location.replace(redirect_uri);
+    </script>
+
+{% endblock%}
