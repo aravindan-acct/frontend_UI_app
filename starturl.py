@@ -22,6 +22,7 @@ logger.setLevel(logging.DEBUG)
 # The route() function of the Flask class is a decorator,
 # which tells the application which URL should call
 # the associated function.
+frontend_ip = {}
 @app.route('/settings/starturl')
 # ‘/settings/starturl’ URL is bound with provisioning() function.
 def view_form():
@@ -69,6 +70,8 @@ def provisioning():
 			"apiproto" : backendproto,
 			"apiport" : backendport
 		}
+		frontend_ip.update({"frontend_ip": frontendip})
+		print(frontend_ip)
 		with open('/tmp/startup_params.json', 'w') as file:
 			file.write(json.dumps(params_dict))
 			file.close()
@@ -78,7 +81,12 @@ def provisioning():
 			logger.info(os.system("sudo systemctl restart frontend"))
 		except:
 			pass
-	return render_template('redirect.html', frontendip = frontendip)
+	return redirect('/settings/redirect')
+
+@app.route('/settings/redirect', methods=['GET'])
+def redirect_url():
+	print(frontend_ip["frontend_ip"])
+	return render_template('redirect.html', frontend_callback_ip = frontend_ip["frontend_ip"])
 
 @app.route('/settings/reset', methods=['POST'])
 
@@ -96,4 +104,4 @@ if __name__ == '__main__':
 
 	# run() method of Flask class runs the application
 	# on the local development server.
-	app.run()
+	app.run(debug=True)

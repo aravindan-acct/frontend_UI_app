@@ -1,13 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <script>
-
-    $(document).ready(()=>{
-            var callbackip = '{{ frontendip }}';
-            console.log(callbackip)
-            redirect_uri: "https://"+callbackip+"/admin",
-            windows.location.replace(redirect_uri);
-            });
+    var callbackip = '{{ frontend_callback_ip }}';
+    console.log(callbackip)
+    redirect_uri= "https://"+callbackip+"/admin";
+    window.location.replace(redirect_uri);
     </script>
 
 {% endblock%}
