@@ -47,7 +47,6 @@ def inventory():
     return_data = resp.text
     data = json.loads(return_data)
     logger.info(data)
-
     return render_template('store/inventory.html', data = data)
 
 @main.route('/admin/pets')
