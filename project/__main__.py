@@ -13,7 +13,7 @@ def create_app():
     
     app.config['SECRET_KEY'] = 'thisisPetStore'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
-
+    app.config['DEBUG'] = True
     db.init_app(app)
     
     login_manager = LoginManager()

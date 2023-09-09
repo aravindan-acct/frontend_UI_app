@@ -1,5 +1,9 @@
 {% extends "pets_base.html" %}
 {% block content %}
-<h1> {{ data }}</h1>
 
+<script>
+var cart_info = '{{ data|tojson }}'
+var payload = $.parseJSON(cart_info);
+console.log(payload);
+</script>
 {% endblock %}

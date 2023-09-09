@@ -5,6 +5,7 @@ from . import db, backend_url, headers
 from flask_login import login_user, logout_user, login_required, current_user
 import requests
 import json
+from . import logger
 
 auth = Blueprint('auth', __name__)
 
@@ -100,7 +101,9 @@ def login_post():
     # check if the user actually exists
     # take the user-supplied password, hash it, and compare it to the hashed password in the database
     user_get = requests.get(user_login_url, verify=False)
-    
+    logger.info(user_login_url)
+    logger.info(user_get.status_code)
+    logger.info(user_get.text)
     if user_get.status_code != 200:
     #if not user or not check_password_hash(user.password, password):
         flash('Please check your login details and try again.')
@@ -108,11 +111,13 @@ def login_post():
 
     # if the above check passes, then we know the user has the right credentials
     else:
+        logger.info("Proceeding with the user flow")
         user_get_info = backend_url + "/user/" + username
         user_info_resp = requests.get(user_get_info, verify=False)
         user_info_text = user_info_resp.text
         user_info = json.loads(user_info_text)
-        print(type(user_info))
+        logger.info(type(user_info))
+        logger.info(user_info)
         class user:
             is_active=user_info["is_active"]
             is_authenticated=user_info["is_authenticated"]
@@ -128,6 +133,6 @@ def login_post():
         db.session.commit()
         user = User.query.filter_by(username = user_info["username"]).first()
         login_user(user, remember=remember)
-
-    return redirect(url_for('main.pets'))
+        logger.info("redirecting the user to /allpets")
+    return redirect('/allpets')
 
