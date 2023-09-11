@@ -3,12 +3,12 @@
 {% block content%}
 
 <div class= "container" id="user">
-    <table class="table is-bordered is-hoverable has-background-light" id="profiletable">
-      <thead class="has-text-centered">
+    <table class="table is-bordered has-background-dark" id="profiletable">
+      <thead class="has-text-centered"> <b>User Profile
         <tr class="has-text-centered">
-          <th><abbr title="FirstName">FirstName</abbr></th>
-          <th><abbr title="LastName">LastName</abbr></th>
-          <th><abbr title="UserName">UserName</abbr></th>
+          <th><abbr title="FirstName" class="has-text-white">First Name</abbr></th>
+          <th><abbr title="LastName" class="has-text-white">Last Name</abbr></th>
+          <th><abbr title="UserName" class="has-text-white">Username</abbr></th>
         </tr>
       </thead>
       <tbody>
@@ -25,9 +25,9 @@
       var firstname = payload["firstName"];
       var lastname = payload["lastName"]
       var username = payload["username"]
-      var user_row = '<tr><td class="has-text-centered">'+firstname+'</td>\
-        <td class="has-text-centered">'+lastname+'</td>\
-        <td class="has-text-centered">'+username+'</td>\
+      var user_row = '<tr><td class="has-text-centered has-text-white"><b>'+firstname+'</td>\
+        <td class="has-text-centered has-text-white"><b>'+lastname+'\
+        <td class="has-text-centered has-text-white"><b>'+username+'</td>\
         </tr>';
       
       $("#profiletable").append(user_row);

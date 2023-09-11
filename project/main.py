@@ -39,8 +39,7 @@ def pets():
 @login_required
 def inventory():
     get_inventory_url = backend_url + "/store/inventory"
-    #token = db.session.query(Token).order_by(Token.id.desc()).first()
-    #headers = {"Authorization": token.tokenstring}
+    logger.info("get_inventory_url is "+ get_inventory_url)
     headers = {"api_key":"",
                "Postman-Token":"6009e770-58ea-4081-8e7a-22ec012d8ed7"}
     resp = requests.get(get_inventory_url, headers=headers, verify=False)
@@ -57,8 +56,7 @@ def admin_pets():
 @login_required
 def getcheckoutpage():
     cartitems = CartItems.query.all()
-    #print(cartitems)
-    #print(type(cartitems))
+    logger.info(cartitems)
     if len(cartitems) == 0:
         return redirect(url_for('main.pets'))
     else:
@@ -82,15 +80,22 @@ def checkout_for_order():
 @login_required
 def shippinginfo():
     headers = {"Content-Type": "application/json"}
-    address = request.form.get('address')
+    door_num = request.form.get('door')
+    street = request.form.get('street')
+    city = request.form.get('city')
+    country = request.form.get('country')
+    pincode = request.form.get('pincode')
+    address = str(door_num) + ", " + str(street) + ", " + str(city) + ", " + str(country) + ", " + str(pincode)
+
     cart = Carts.query.filter_by(username = current_user.username).first()
     
-    #print(cart)
+    logger.info(cart)
     cart_id = cart.id
-    #print(cart_id)
+    logger.info(cart_id)
     cartitems = CartItems.query.filter_by(cart_id = cart_id).all()
+
+    logger.info(cartitems)
     
-    #print(cartitems)
     cartitems_dict = {}
     for i in range(len(cartitems)):
         cartitems_dict.update({
@@ -191,12 +196,13 @@ def removefromcart():
 @main.route('/viewcart', methods=['GET'])
 @login_required
 def viewcart():
+    # Need to Fix this flow
     cart_items = CartItems.query.all()
     data=[]
     
     for i in range(len(cart_items)):
         data.append(cart_items[i].pet_id )
-        #print(data)
+    logger.info(data)
     data_to_display = {}
     num_of_items = len(data)
     data_to_display.update({

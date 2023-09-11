@@ -1,14 +1,18 @@
 {% extends "pets_base.html" %}
 {% block content %}
-<button class="button" id="viewcart"><a href="/viewcart">View Cart</a></button>
+<button class="button" id="viewcart" style="margin-bottom: 10px;"><a href="/viewcart">View Cart</a></button>
 <form class="form" method="POST" action="/shippinginfo">
     <div class="field">
         <div class="control">
-            <input class="input is-large" type="text" name="address" placeholder="Address" autofocus="">
+            <input class="input is-large" style="margin-bottom: 10px;" type="text" name="door" placeholder="#" autofocus="">
+            <input class="input is-large" style="margin-bottom: 10px;" type="text" name="street" placeholder="Street" autofocus="">
+            <input class="input is-large" style="margin-bottom: 10px;" type="text" name="city" placeholder="City" autofocus="">
+            <input class="input is-large" style="margin-bottom: 10px;" type="text" name="country" placeholder="Country" autofocus="">
+            <input class="input is-large" style="margin-bottom: 10px;" type="text" name="pincode" placeholder="Pincode" autofocus="">
         </div>
     </div>
 
-    <button class="button is-block is-info is-large is-fullwidth"><a href="/placeorder" method="POST">Place Order</a></button>
+    <button class="button is-block is-info is-large"><a href="/placeorder" method="POST">Place Order</a></button>
 </form>
 
 </div>
