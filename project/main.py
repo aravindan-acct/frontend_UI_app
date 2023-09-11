@@ -200,16 +200,38 @@ def viewcart():
     cart_items = CartItems.query.all()
     data=[]
     
-    for i in range(len(cart_items)):
-        data.append(cart_items[i].pet_id )
+    for cart in cart_items:
+        #logger.info(cart.items())
+        logger.info(cart.pet_id)
+        data.append(cart.pet_id )
+    logger.info("pet data is")
     logger.info(data)
     data_to_display = {}
-    num_of_items = len(data)
-    data_to_display.update({
-        "total_items": num_of_items,
-        "Items": data
-    })
+    logger.info("testing requests")
+    token = db.session.query(Token).order_by(Token.id.desc()).first()
+    headers = {"Authorization": token.tokenstring}
+    res_store = requests.get(backend_url+"/pet/1", headers=headers, verify=False)
+    logger.info(res_store.text)
     
+    for petid in data:
+        
+        logger.info("working with pet_id " + str(petid))
+        logger.info(backend_url)
+        get_pet_url = backend_url + "/pet/" + str(petid)
+        logger.info(get_pet_url)
+        logger.info(headers)
+        resp = requests.get(get_pet_url, headers=headers, verify=False)
+        logger.info(resp.text)
+        json_resp = json.loads(resp.text)
+
+        num_of_items = len(data)
+        for k,v in json_resp.items():
+            logger.info("key is" + str(k))
+
+            data_to_display.update({
+            k: v
+            })
+    logger.info(data_to_display)
     return render_template('viewcart.html', data = data_to_display)
 
 
