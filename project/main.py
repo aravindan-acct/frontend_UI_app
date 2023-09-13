@@ -87,7 +87,7 @@ def shippinginfo():
     else:
         return ('Invalid input', 404)
     street = request.form.get('street')
-    if Validator.check_street(street):
+    if Validator.check_street(str(street)):
         pass
     else:
         return ('Invalid input', 404)
