@@ -5,6 +5,7 @@ import requests
 import json
 from .models import Token, CartItems, Carts, Transactions, TransactionDetails
 from . import logger
+from input_validator import Validator
 
 
 main = Blueprint('main', __name__)
@@ -81,11 +82,32 @@ def checkout_for_order():
 def shippinginfo():
     headers = {"Content-Type": "application/json"}
     door_num = request.form.get('door')
+    if Validator.check_string(str(door_num)):
+        pass
+    else:
+        return ('Invalid input', 404)
     street = request.form.get('street')
+    if Validator.check_street(street):
+        pass
+    else:
+        return ('Invalid input', 404)
     city = request.form.get('city')
+    if Validator.check_string(str(city)):
+        pass
+    else:
+        return ('Invalid input', 404)
     country = request.form.get('country')
+    if Validator.check_string(str(country)):
+        pass
+    else:
+        return ('Invalid input', 404)
     pincode = request.form.get('pincode')
-    address = str(door_num) + ", " + str(street) + ", " + str(city) + ", " + str(country) + ", " + str(pincode)
+    if Validator.check_num(int(pincode)):
+        pass
+    else:
+        return('Invalid input', 404)
+    
+    address = "#"+str(door_num) + ", " + str(street) + ", " + str(city) + ", " + str(country) + ", " + str(pincode)
 
     cart = Carts.query.filter_by(username = current_user.username).first()
     

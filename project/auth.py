@@ -56,6 +56,10 @@ def signup_post():
     else:
         return ('Invalid input', 404)
     password = request.form.get('password')
+    if Validator.check_passwd(str(password)):
+        pass
+    else:
+        return('Invalid input', 404)
     firstName = request.form.get('firstName')
     if Validator.check_string(str(firstName)):
         pass
