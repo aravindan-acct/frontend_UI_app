@@ -77,7 +77,6 @@ def signup_post():
     user_get = requests.get(user_get_url, verify=False)
     if user_get.status_code == 200:
     #if user: # if a user is found, we want to redirect back to signup page so user can try again
-        flash('Email address already exists')
         return redirect(url_for('auth.signup'))
 
     # create a new user with the form data. Hash the password so the plaintext version isn't saved.
@@ -100,10 +99,8 @@ def signup_post():
     new_user_url = backend_url + "/user"
     new_user = requests.post(new_user_url, headers=headers, data=json.dumps(payload), verify=False)
     if new_user.status_code == 200:
-        #return redirect(url_for('auth.login'))
         return redirect(url_for('auth.login'))
     else:
-        flash('Something wrong, change your username, email address and try')
         return redirect(url_for('auth.signup'))
 
 @auth.route('/login', methods=['POST'])

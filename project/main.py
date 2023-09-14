@@ -10,18 +10,12 @@ from .input_validator import Validator
 
 main = Blueprint('main', __name__)
 
+# Used for end user access to the Store.
+# To add/delete/edit an item, login as admin.
+
 @main.route('/')
 def index():
     return render_template('index.html')
-
-@main.route('/contactus')
-def contactus():
-    return render_template('contactus.html')
-
-@main.route('/aboutus')
-def aboutus():
-    return render_template('aboutus.html')
-
 
 @main.route('/profile')
 @login_required
@@ -29,7 +23,7 @@ def profile():
     username = current_user.username
     get_profile_url = backend_url + "/user/" +username
     profile_resp = requests.get(get_profile_url, verify=False)
-    return render_template('profile.html', profile = json.loads(profile_resp.text))
+    return render_template('/profile.html', profile = json.loads(profile_resp.text))
 
 @main.route('/pets')
 @login_required
@@ -49,9 +43,6 @@ def inventory():
     logger.info(data)
     return render_template('store/inventory.html', data = data)
 
-@main.route('/admin/pets')
-def admin_pets():
-    return render_template('pets_menu.html')
 
 @main.route('/checkout')
 @login_required
@@ -176,15 +167,11 @@ def addtocart():
     data=[]
     
     for i in range(len(cart_items)):
-        #print(cart_items[i])
         data.append(cart_items[i].pet_id )
-        #print(data)
     
     if int(pet_id) in data:
         pass
     else:
-        #print(type(pet_id))
-        #print("not in list")
         new_cart_item = CartItems(pet_id = pet_id, cart_id=cart_id)
         db.session.add(new_cart_item)
         db.session.commit()
@@ -196,7 +183,7 @@ def addtocart():
 def removefromcart():
     username = current_user.username
     pet_id = request.args["pet_id"]
-    cart = Carts.query.filter_by(username = current_user.username).first()
+    cart = Carts.query.filter_by(username = username).first()
     cart_id = cart.id
     cart_items = CartItems.query.filter_by(pet_id = int(pet_id)).first()
 
@@ -216,7 +203,6 @@ def viewcart():
     data=[]
     
     for cart in cart_items:
-        #logger.info(cart.items())
         logger.info(cart.pet_id)
         data.append(cart.pet_id )
     logger.info("pet data is")
@@ -239,7 +225,6 @@ def viewcart():
         logger.info(resp.text)
         json_resp = json.loads(resp.text)
 
-        num_of_items = len(data)
         for k,v in json_resp.items():
             logger.info("key is" + str(k))
 

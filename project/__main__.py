@@ -46,6 +46,7 @@ def create_app():
     app.register_blueprint(admin_blueprint)
     
     return app
+
 def main():
     app = create_app()
     http_server = HTTPServer(WSGIContainer(app))
