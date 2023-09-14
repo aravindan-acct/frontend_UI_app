@@ -5,7 +5,7 @@ from . import db, backend_url, headers
 from flask_login import login_user, logout_user, login_required, current_user
 import requests
 import json
-from input_validator import Validator
+from .input_validator import Validator
 from . import logger
 
 auth = Blueprint('auth', __name__)
