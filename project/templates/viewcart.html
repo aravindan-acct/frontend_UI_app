@@ -1,8 +1,17 @@
 {% extends "pets_base.html" %}
 {% block content %}
-<strong class="content is-large">Cart</strong>
+<div class="column is-4 is-offset-4">
+    <form method="POST" action="/checkout">
+    <h3 class="title">Your Cart</h3>
+
     
-<h3>{{ data }}</h3>
+        <h3>{{ data }}</h3>
+
+        <button class="button is-block is-success is-large">Checkout</button>
+        <button class="button is-block is-danger is-large">Cancel</button>
+    
+    </form>
+</div>
 
 <script>
 var cart_info = '{{ data|tojson }}'
