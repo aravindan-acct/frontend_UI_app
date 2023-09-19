@@ -52,14 +52,6 @@
                     </a>
                     {% endif %}
 
-                    <a href="{{ url_for('main.aboutus') }}" class="navbar-item">
-                        About Us
-                    </a>
-
-                    <a href="{{ url_for('main.contactus') }}" class="navbar-item">
-                        Contact Us
-                    </a>
-
                     {% if current_user.is_authenticated %}
                     <button class="button"><a href="{{ url_for('main.getcheckoutpage') }}">Checkout</a></button>
                     {% endif %}
