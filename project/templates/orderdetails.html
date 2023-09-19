@@ -6,8 +6,8 @@
     <table class="table is-bordered is-hoverable has-background-light" id="transactionstable">
         <thead class="has-text-centered">
             <tr class="has-text-centered">
-              <th><abbr title="Transactionsdetails">Transaction Details</abbr></th>
-              <th><abbr title="Value"></abbr></th>
+              
+              <th><abbr title="Value">Order Details</abbr></th>
             </tr>
           </thead>
           <tbody>
@@ -19,16 +19,16 @@
       </div>
       <script>    var transaction = '{{ payload|tojson }}';
         
+        console.log(typeof(transaction));
         console.log(transaction);
-        console.log("the transaction details are")
         //var payload = JSON.parse(transaction);
         //console.log(payload["transactionDetailsId"]);
         
           //var transaction_id = transaction["transactionDetailsId"];
           //var shipdate = transaction["shipDate"]
           //var username = transaction["username"]
-          var transaction_details = '<tr><td class="has-text-centered">'+"Transaction ID"+'</td>\
-            <tr><td class="has-text-centered">'+transaction+'</td>\
+          var transaction_details = '<tr>\
+            <td class="has-text-centered">'+transaction+'</td>\
             </tr>';
           
           $("#transactionstable").append(transaction_details);

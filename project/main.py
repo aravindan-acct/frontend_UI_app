@@ -5,22 +5,17 @@ import requests
 import json
 from .models import Token, CartItems, Carts, Transactions, TransactionDetails
 from . import logger
+from .input_validator import Validator
 
 
 main = Blueprint('main', __name__)
 
+# Used for end user access to the Store.
+# To add/delete/edit an item, login as admin.
+
 @main.route('/')
 def index():
     return render_template('index.html')
-
-@main.route('/contactus')
-def contactus():
-    return render_template('contactus.html')
-
-@main.route('/aboutus')
-def aboutus():
-    return render_template('aboutus.html')
-
 
 @main.route('/profile')
 @login_required
@@ -28,7 +23,7 @@ def profile():
     username = current_user.username
     get_profile_url = backend_url + "/user/" +username
     profile_resp = requests.get(get_profile_url, verify=False)
-    return render_template('profile.html', profile = json.loads(profile_resp.text))
+    return render_template('/profile.html', profile = json.loads(profile_resp.text))
 
 @main.route('/pets')
 @login_required
@@ -48,9 +43,6 @@ def inventory():
     logger.info(data)
     return render_template('store/inventory.html', data = data)
 
-@main.route('/admin/pets')
-def admin_pets():
-    return render_template('pets_menu.html')
 
 @main.route('/checkout')
 @login_required
@@ -60,32 +52,46 @@ def getcheckoutpage():
     if len(cartitems) == 0:
         return redirect(url_for('main.pets'))
     else:
-        return render_template('checkout.html')
+        return redirect('/viewcart')
 
 @main.route('/checkout', methods=['POST'])
 @login_required
 def checkout_for_order():
-    get_inventory_url = backend_url + "/store/inventory"
-    #token = db.session.query(Token).order_by(Token.id.desc()).first()
-    #headers = {"Authorization": token.tokenstring}
-    headers = {"api_key":"",
-               "Postman-Token":"6009e770-58ea-4081-8e7a-22ec012d8ed7"}
-    resp = requests.get(get_inventory_url, headers=headers, verify=False)
-    return_data = resp.text
-    data = json.loads(return_data)
-    #print(data)
-    return render_template('store/inventory.html', data = data)
+
+    return render_template('/checkout.html')
 
 @main.route('/shippinginfo', methods=['GET','POST'])
 @login_required
 def shippinginfo():
     headers = {"Content-Type": "application/json"}
     door_num = request.form.get('door')
+    if Validator.check_string(str(door_num)):
+        pass
+    else:
+        return ('Invalid input - door num', 404)
     street = request.form.get('street')
+    if Validator.check_street(str(street)):
+        pass
+    else:
+        return ('Invalid input - street', 404)
     city = request.form.get('city')
+    if Validator.check_string(str(city)):
+        pass
+    else:
+        return ('Invalid input - city', 404)
     country = request.form.get('country')
+    if Validator.check_string(str(country)):
+        pass
+    else:
+        return ('Invalid input - country', 404)
     pincode = request.form.get('pincode')
-    address = str(door_num) + ", " + str(street) + ", " + str(city) + ", " + str(country) + ", " + str(pincode)
+    '''
+    if Validator.check_num(pincode):
+        pass
+    else:
+        return('Invalid input - pincode', 404)
+    '''
+    address = "#"+str(door_num) + ", " + str(street) + ", " + str(city) + ", " + str(country) + ", " + str(pincode)
 
     cart = Carts.query.filter_by(username = current_user.username).first()
     
@@ -161,15 +167,11 @@ def addtocart():
     data=[]
     
     for i in range(len(cart_items)):
-        #print(cart_items[i])
         data.append(cart_items[i].pet_id )
-        #print(data)
     
     if int(pet_id) in data:
         pass
     else:
-        #print(type(pet_id))
-        #print("not in list")
         new_cart_item = CartItems(pet_id = pet_id, cart_id=cart_id)
         db.session.add(new_cart_item)
         db.session.commit()
@@ -181,7 +183,7 @@ def addtocart():
 def removefromcart():
     username = current_user.username
     pet_id = request.args["pet_id"]
-    cart = Carts.query.filter_by(username = current_user.username).first()
+    cart = Carts.query.filter_by(username = username).first()
     cart_id = cart.id
     cart_items = CartItems.query.filter_by(pet_id = int(pet_id)).first()
 
@@ -200,16 +202,36 @@ def viewcart():
     cart_items = CartItems.query.all()
     data=[]
     
-    for i in range(len(cart_items)):
-        data.append(cart_items[i].pet_id )
+    for cart in cart_items:
+        logger.info(cart.pet_id)
+        data.append(cart.pet_id )
+    logger.info("pet data is")
     logger.info(data)
     data_to_display = {}
-    num_of_items = len(data)
-    data_to_display.update({
-        "total_items": num_of_items,
-        "Items": data
-    })
+    logger.info("testing requests")
+    token = db.session.query(Token).order_by(Token.id.desc()).first()
+    headers = {"Authorization": token.tokenstring}
+    res_store = requests.get(backend_url+"/pet/1", headers=headers, verify=False)
+    logger.info(res_store.text)
     
+    for petid in data:
+        
+        logger.info("working with pet_id " + str(petid))
+        logger.info(backend_url)
+        get_pet_url = backend_url + "/pet/" + str(petid)
+        logger.info(get_pet_url)
+        logger.info(headers)
+        resp = requests.get(get_pet_url, headers=headers, verify=False)
+        logger.info(resp.text)
+        json_resp = json.loads(resp.text)
+
+        for k,v in json_resp.items():
+            logger.info("key is" + str(k))
+
+            data_to_display.update({
+            k: v
+            })
+    logger.info(data_to_display)
     return render_template('viewcart.html', data = data_to_display)
 
 

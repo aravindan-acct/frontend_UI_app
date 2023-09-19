@@ -12,7 +12,7 @@ from . import logger
 admin = Blueprint('admin', __name__)
 
 
-
+# Landing URL for admin login
 @admin.route('/admin')
 def administrator():
     with open('/tmp/startup_params.json', 'r') as file:
@@ -25,6 +25,8 @@ def administrator():
     except:
         callback_ip = contents_dict["publicip"]
     
+    # Assuming that frontend is always deployed with HTTPS Protocol
+    # Deployment on Azure is also tuned to deploy NGINX proxy listening on https/443
     callback_proto = "https"
     callback_port = "443"
     return render_template('admin.html', callback_ip = callback_ip, callback_proto = callback_proto, 
@@ -34,6 +36,7 @@ def administrator():
 def callback():
     
     return render_template('home.html')
+
 
 
 @admin.route('/callback_backend', methods=['GET'])
@@ -48,38 +51,16 @@ def callback_backend():
     new_token = Token(tokenstring = auth_header_value)
     db.session.add(new_token)
     db.session.commit()
-
-    '''
-    url = "http://54.193.108.132:8080/api/petstore/1.0.0/pet"
-
-    payload = 'name=testing28&id=19&tags=%5B%22tag1%22%2C%22%20tag2%22%5D&photoUrls=%5B%22photo1%22%2C%20%22photo2%22%5D&status=available'
-    headers = {
-        'Authorization': auth_header_value,
-        'Content-Type': 'application/x-www-form-urlencoded'
-        }
-
-    response = requests.request("POST", url, headers=headers, data = payload)
-    print(response.status_code)
-    '''
     
     return redirect('/admin/all_pets')
 
-'''
-@admin.route('/adminhome.html')
-def adminhome():
-    
-    token = db.session.query(Token).order_by(Token.id.desc()).first()
-    headers = {"Authorization": token.tokenstring}
-    url = "http://54.193.108.132:8080/api/petstore/1.0.0/pet/findByStatus?status=available"
-    response = requests.get(url, headers=headers)
-
-    return render_template('adminhome.html', display_json =  response.text)
-'''
-
+# URL to add an item
 @admin.route('/admin/addpet')
 def addpet_get():
     return render_template('petupload.html')
 
+# URL to edit an item. This route gets the item details with existing values.
+# Useful to know what's existing and if that has to be changed.
 @admin.route('/admin/petsedit', methods=['GET'])
 def pets_edit():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
@@ -94,6 +75,7 @@ def pets_edit():
     print(type(resp))
     return render_template('/editpet.html', data = resp)
 
+# URL to edit an item. This route uses the PUT method to edit the item values.
 @admin.route('/admin/petsedit', methods=['POST'])
 def pets_edit_put():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
@@ -103,6 +85,7 @@ def pets_edit_put():
     photoUrls=list()
     data = {}
     data.update({"id": request.form.get('id')})
+    # Input validation for updated values
     if request.form.get('name'):
         name = request.form.get('name')
         data.update({"name": name})
@@ -142,7 +125,12 @@ def pets_edit_put():
         print("There is a problem with editing the Pet")
         return redirect('/admin/all_pets')
 
+# This route fetches the list of items and renders it on the HTML
+@admin.route('/admin/pets')
+def admin_pets():
+    return render_template('pets_menu.html')
 
+# This route is used to delete an item from the inventory
 @admin.route('/admin/petsdelete')
 def pets_delete():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
@@ -174,6 +162,7 @@ def pets_menu():
     print(resp)
     return render_template('pets_menu.html', display_json=resp)
 
+# Provides a starter pack of items so that the portal can be trialed.
 @admin.route('/admin/uploadsampledata')
 def uploadsampledata():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
@@ -223,7 +212,7 @@ def uploadsampledata():
         
         return redirect('/admin/all_pets')
 
-    
+# This route is used for adding a new item to the existing list    
 @admin.route('/admin/addpet', methods=['POST'])
 def addpet():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
@@ -253,10 +242,6 @@ def addpet():
         "photoUrls": photoUrls,
         "status": status
     }
-
-    print(payload)
-    
-    
     response = requests.post(url, headers=headers, data=urlencode(payload), verify=False)
     if response.status_code == 200:
         resp = json.loads(response.text)

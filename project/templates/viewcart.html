@@ -1,9 +1,35 @@
 {% extends "pets_base.html" %}
 {% block content %}
+<div class="column is-4 is-offset-4">
+    <form method="POST" action="/checkout">
+    <h3 class="title">Your Cart</h3>
+
+    
+        <h3 id=cart></h3>
+
+        <button class="button is-block is-success is-large">Checkout</button>
+        <button class="button is-block is-danger is-large">Cancel</button>
+    
+    </form>
+</div>
 
 <script>
 var cart_info = '{{ data|tojson }}'
 var payload = $.parseJSON(cart_info);
-console.log(payload);
+//console.log(payload);
+let petid = Object.keys(payload)
+console.log(petid.length)
+console.log(petid)
+for (i in petid) {
+    console.log("i is "+i);
+    let j = petid[i];
+    console.log(j);
+    console.log(payload[j]);
+    
+    $("#cart").append(j+ " ");
+    
+}
+
+
 </script>
 {% endblock %}

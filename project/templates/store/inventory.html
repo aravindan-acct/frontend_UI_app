@@ -27,9 +27,9 @@
     var photo2 = payload[key]["photo2"]
     var petname_row = '<tr>\
       <td class="has-text-centered"> <img src='+photo1+' width="200" height="200" style="margin: 30px 30px"><img src='+photo2+' width="200" height="200" style="margin: 30px 30px"></td>\
-        <td><p><button class="button" style="margin:50px 15px"><a href="/addtocart?pet_id='+key+'"> <b> 🛒 + </a></button>\
+        <td class="has-text-centered"><p><button class="button" style="margin:50px 15px"><a href="/addtocart?pet_id='+key+'"> <b> 🛒 + </a></button>\
         <button class="button" style="margin:50px 15px"><a href="/removefromcart?pet_id='+key+'"><b>  🛒 -  </a></button></p></td>\
-        <td><p><button class="button" id="viewcart" style="margin:50px 40px"><a href="/viewcart">View Cart</a></button></p>\
+        <td class=""><p><button class="button is-danger" id="viewcart" style="margin:50px 40px"><a href="/viewcart">View Cart</a></button></p>\
         </td>\
       </tr>';
     $("#petstable").append(petname_row);

@@ -8,7 +8,7 @@
     <title>My Petstore</title>
 </head>
 
-    <section class="hero is-dark is-fullheight is-bold">
+    <section class="hero is-link is-fullheight">
         <div class="hero-head">
             <nav class="navbar">
                 <div class="container">
@@ -51,14 +51,6 @@
                         Logout
                     </a>
                     {% endif %}
-
-                    <a href="{{ url_for('main.aboutus') }}" class="navbar-item">
-                        About Us
-                    </a>
-
-                    <a href="{{ url_for('main.contactus') }}" class="navbar-item">
-                        Contact Us
-                    </a>
 
                     {% if current_user.is_authenticated %}
                     <button class="button"><a href="{{ url_for('main.getcheckoutpage') }}">Checkout</a></button>
