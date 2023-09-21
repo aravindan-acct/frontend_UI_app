@@ -88,6 +88,15 @@ def redirect_url():
 	print(frontend_ip["frontend_ip"])
 	return render_template('redirect.html', frontend_callback_ip = frontend_ip["frontend_ip"])
 
+def file_ops():
+    with open("/tmp/startup_params.json", "r") as f:
+        input_file = f.read()
+    if len(input_file) > 0:
+        return True
+    else:
+        pass
+
+
 @app.route('/settings/reset', methods=['POST'])
 
 def reset():
@@ -95,9 +104,13 @@ def reset():
 	for env_var in env_list:
 		try:
 			os.unsetenv(env_var)
+			if file_ops():
+				with open("/tmp/startup_params.json", "w") as f:
+					file_to_write = f.write("file contents erased")
 		except:
 			pass
-	return ('Configuration Reset', 200)
+	return ("Configuration reset completed", 200)
+	
 
 # main driver function
 if __name__ == '__main__':
