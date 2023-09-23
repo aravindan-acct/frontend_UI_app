@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, redirect, url_for, session, jsonify, request,flash
-from .pets import process_pets
 from authlib.integrations.flask_client import OAuth
 from six.moves.urllib.parse import urlencode
 import requests

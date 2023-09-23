@@ -23,8 +23,6 @@ class Carts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     activestate = db.Column(db.String(100))
-    
-
 
 class CartItems(db.Model):
     id = db.Column(db.Integer, primary_key=True)

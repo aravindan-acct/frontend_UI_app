@@ -5,13 +5,9 @@ import os
 import json
 import logging
 
-#logger = logging.getLogger(__name__)
-
-#logger.setLevel(logging.DEBUG)
-#file_handler = logging.('/tmp/accesslogs.log', mode='w', level=logging.DEBUG)
 logger = logging
 logger.basicConfig(filename='/tmp/accesslogs.log', level=logger.DEBUG)
-#logger.addHandler(file_handler)
+
 
 
 db = SQLAlchemy()
