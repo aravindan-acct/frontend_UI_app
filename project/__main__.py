@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from tornado.wsgi import WSGIContainer
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
+from datetime import timedelta
 from . import logger
 db = SQLAlchemy()
 
@@ -44,6 +45,11 @@ def create_app():
     #blueprint for admin in the app
     from .admin import admin as admin_blueprint
     app.register_blueprint(admin_blueprint)
+    
+    @app.before_request
+    def before_request():
+        session.permanent = True
+        app.permanent_session_lifetime = timedelta(minutes = 10)
     
     return app
 
