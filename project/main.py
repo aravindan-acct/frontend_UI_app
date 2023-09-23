@@ -110,9 +110,6 @@ def shippinginfo():
                 "cart_id": cartitems[i].cart_id
             } 
         })
-    
-    #print(cartitems_dict)
-
     #check if transaction is active
     active_transactions = Transactions.query.filter_by(status = "active").all()
     if len(active_transactions) != 0:

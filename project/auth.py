@@ -33,14 +33,13 @@ def logout():
             db.session.delete(delete_cart_items[i])
             db.session.commit()
         delete_cart = Carts.query.filter_by(username = current_user.username).all()
-        print(delete_cart)
-        print(type(delete_cart))
+        logger.info(delete_cart)
+        logger.info(type(delete_cart))
         for i in range(len(delete_cart)):
             print("deleting cart {} for the user".format(delete_cart[i]))
 
             db.session.delete(delete_cart[i])
             db.session.commit()
-        
         logout_user()
     except:
         logout_user()

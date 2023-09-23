@@ -65,14 +65,11 @@ def addpet_get():
 def pets_edit():
     token = db.session.query(Token).order_by(Token.id.desc()).first()
     headers = {"Authorization": token.tokenstring}
-    print(headers)
     petid_string = request.args["petid"]
     petid_list = petid_string.split('y')
     get_pet_url = backend_url+"/pet/"+petid_list[1]
-    print(get_pet_url)
     get_pet_resp = requests.get(get_pet_url, headers=headers, verify=False)
     resp = json.loads(get_pet_resp.text)
-    print(type(resp))
     return render_template('/editpet.html', data = resp)
 
 # URL to edit an item. This route uses the PUT method to edit the item values.
@@ -113,9 +110,6 @@ def pets_edit_put():
         pass
     else:
         data.update({"photoUrls": photoUrls})
-    print("Tags count is {}".format(len(tags)))
-    print("Photos count is {}".format(len(photoUrls)))
-    print(data)
     edit_url = backend_url+"/pet"
     edit_resp = requests.put(edit_url, headers=headers, data=urlencode(data), verify=False)
     if edit_resp.status_code == 200:
@@ -137,9 +131,7 @@ def pets_delete():
     headers = {"Authorization": token.tokenstring}
     petid_string = request.args["petid"]
     petid_list = petid_string.split('y')
-
     delete_url = backend_url+"/pet/"+petid_list[1]
-    print(delete_url)
     delete_resp = requests.delete(delete_url, headers=headers, verify=False)
     if delete_resp.status_code == 200:
         return redirect('/admin/all_pets')
@@ -153,13 +145,8 @@ def pets_menu():
     headers = {"Authorization": token.tokenstring}
     available_status_url = backend_url+"/pet/findByStatus?status=available&status1=pending&status2=sold"
     available_status_response = requests.get(available_status_url, headers=headers, verify=False)
-    
     resp = dict()
     resp = json.loads(available_status_response.text)
-
-    print(type(resp))
-    print(len(resp))
-    print(resp)
     return render_template('pets_menu.html', display_json=resp)
 
 # Provides a starter pack of items so that the portal can be trialed.
@@ -227,13 +214,11 @@ def addpet():
     tags = list()
     tags.append(tags_1)
     tags.append(tags_2)
-    print(tags)
     photoUrls_1 = request.form.get('photoUrls_1')
     photoUrls_2 = request.form.get('photoUrls_2')
     photoUrls=list()
     photoUrls.append(photoUrls_1)
     photoUrls.append(photoUrls_2)
-    print(photoUrls)
     status = request.form.get('status')
     
     payload = {
